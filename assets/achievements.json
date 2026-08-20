@@ -1,0 +1,850 @@
+[
+  {
+    "id": "82635",
+    "badge": "89059",
+    "title": "What is a Man?",
+    "desc": "Defeat Dracula in the prologue",
+    "condition": "timeattack:0",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=45776_R:0x 073074!=0_0xX03ca28!=0_d0xX03ca28=0"
+  },
+  {
+    "id": "82637",
+    "badge": "89860",
+    "title": "Demonic Duo",
+    "desc": "Defeat Gaibon and Slogra in the Alchemy Laboratory with Alucard",
+    "condition": "timeattack:6",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=44636_0xH03c9a0=0_0xX03ca40!=0_d0xX03ca40=0_0xH03be21=1"
+  },
+  {
+    "id": "82643",
+    "badge": "89865",
+    "title": "Shadow in the Mirror",
+    "desc": "Defeat the Doppleganger10 in the Outer Wall with Alucard",
+    "condition": "timeattack:2",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=50792_0xH03c9a0=0_0xX03ca30!=0_d0xX03ca30=0_0xH03be21=1"
+  },
+  {
+    "id": "82646",
+    "badge": "89062",
+    "title": "Magical Key",
+    "desc": "Acquire the Jewel of Open from the master librarian",
+    "condition": "relic:JewelOfOpen",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=38000_0xH097974=3_0xH097974>d0xH097974_A:0xX097bf0_500=d0xX097bf0_0xH03be21=1"
+  },
+  {
+    "id": "82647",
+    "badge": "89063",
+    "title": "Cavern Maiden",
+    "desc": "Defeat Scylla in the Underground Caverns with Alucard",
+    "condition": "timeattack:5",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=60688_0xH03c9a0=0_0xX03ca3c!=0_d0xX03ca3c=0_0xH03be21=1"
+  },
+  {
+    "id": "82655",
+    "badge": "89068",
+    "title": "Black Wings",
+    "desc": "Find the Leap Stone",
+    "condition": "relic:LeapStone",
+    "memaddr": "R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=9812_0xH097971!=0_d0xH097971=0_0xH03be21=1"
+  },
+  {
+    "id": "82656",
+    "badge": "89868",
+    "title": "Guardians of the Keep",
+    "desc": "Defeat Hippogryph and Karasuman with Alucard",
+    "condition": "timeattack:7,10",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084=0_0xH03c9a0=0_0xH03be21=1S0x 073084=14296_0x 03ca44!=0_0x 03ca50!=0_d0x 03ca50=0S0x 073084=61572_0x 03ca50!=0_0x 03ca44!=0_d0x 03ca44=0"
+  },
+  {
+    "id": "82658",
+    "badge": "89869",
+    "title": "A Thread and a Bullet",
+    "desc": "Defeat the Minotaurus and the Werewolf in the Colosseum with Alucard",
+    "condition": "timeattack:4",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=17172_0xH03c9a0=0_0xX03ca38!=0_d0xX03ca38=0_0xH03be21=1"
+  },
+  {
+    "id": "82659",
+    "badge": "89870",
+    "title": "Fall of a Nosferatu",
+    "desc": "Defeat Olrox in his quarters with Alucard",
+    "condition": "timeattack:1",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=29096_0xH03c9a0=0_0xX03ca2c!=0_d0xX03ca2c=0_0xH03be21=1"
+  },
+  {
+    "id": "82663",
+    "badge": "89070",
+    "title": "Gatekeeper of Hell",
+    "desc": "Defeat Cerberos in the Abandoned Mine with Alucard",
+    "condition": "timeattack:13",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=32800_0xH03c9a0=0_0xX03ca5c!=0_d0xX03ca5c=0_0xH03be21=1"
+  },
+  {
+    "id": "82666",
+    "badge": "89873",
+    "title": "For I am Many",
+    "desc": "Defeat Granfaloon in the Catacombs with Alucard",
+    "condition": "timeattack:3",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=19608_0xH03c9a0=0_0xX03ca34!=0_d0xX03ca34=0_0xH03be21=1"
+  },
+  {
+    "id": "82665",
+    "badge": "89071",
+    "title": "Iron Maiden Destroyer",
+    "desc": "Find the Spike Breaker in the Catacombs",
+    "condition": "body:SpikeBreaker",
+    "memaddr": "R:d0x 03c774=61144_R:0x 03c774=61144_0x 073084=25336_0xH03c9a0=0_0xM03befe=1_d0xM03befe=0_0xH03be21=1"
+  },
+  {
+    "id": "82154",
+    "badge": "88340",
+    "title": "Silver Key",
+    "desc": "Obtain the Silver Ring in the Royal Chapel's hidden room",
+    "condition": "body:SilverRing",
+    "memaddr": "0x 073084=30764_0xH097a7c=1_d0xH097a7c=0_0xH03be21=1"
+  },
+  {
+    "id": "82692",
+    "badge": "89060",
+    "title": "Golden Key",
+    "desc": "Defeat Succubus and find the Gold Ring",
+    "condition": "timeattack:9",
+    "memaddr": "R:d0x 03c774=61144_R:0x 03c774=61144_0x 073084=5204_0xH03c9a0=0_0xO03bef5=1_d0xO03bef5=0_0xH03be21=1"
+  },
+  {
+    "id": "82155",
+    "badge": "88466",
+    "title": "Beyond Evil Illusions",
+    "desc": "Obtain the elusive Holy glasses",
+    "condition": "body:HolyGlasses",
+    "memaddr": "0xH03c9a0=0_0x 073084=28140_0xH097a55=1_d0xH097a55=0_0xH03be21=1"
+  },
+  {
+    "id": "82156",
+    "badge": "88341",
+    "title": "Not All Yet lost",
+    "desc": "Defeat Shaft in the Castle Keep with Alucard and free Richter from his magic",
+    "condition": "timeattack:14",
+    "memaddr": "0xH03c9a0=0_0x 073084=63392_0xH03be81=1_d0xH03be81=0_R:d0xH09798e>1"
+  },
+  {
+    "id": "83018",
+    "badge": "90366",
+    "title": "Echoes of the Past",
+    "desc": "Defeat the fake heroes of long past in the Reverce Colosseum with Alucard",
+    "condition": "timeattack:11",
+    "memaddr": "0x 073084=47404_0xX03ca54!=0_d0xX03ca54=0_0xH03be21=1_0xH03c9a0=0"
+  },
+  {
+    "id": "83017",
+    "badge": "90365",
+    "title": "Lord of the Flies",
+    "desc": "Defeat Beezelbub in the Necromancy Laboratory with Alucard",
+    "condition": "timeattack:8",
+    "memaddr": "0x 073084=40764_0xX03ca48!=0_d0xX03ca48=0_0xH03be21=1_0xH03c9a0=0"
+  },
+  {
+    "id": "82802",
+    "badge": "89877",
+    "title": "Beyond the Mirror",
+    "desc": "Defeat Doppleganger40 in the Reverce Caverns with Alucard",
+    "condition": "timeattack:18",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=51008_0xH03c9a0=0_0xX03ca70!=0_d0xX03ca70=0"
+  },
+  {
+    "id": "82165",
+    "badge": "88343",
+    "title": "Ring of Vlad",
+    "desc": "Defeat Darkwing Bat and acquire the Ring of Vlad relic",
+    "condition": "timeattack:20",
+    "memaddr": "0x 073084=12420_0xH097980=3_d0xH097980=0_0xH03be21=1_0xH03c9a0=0"
+  },
+  {
+    "id": "82166",
+    "badge": "88344",
+    "title": "Tooth of Vlad",
+    "desc": "Defeat The Creature and acquire the Tooth of Vlad relic",
+    "condition": "timeattack:16",
+    "memaddr": "0xH09797e=3_d0xH09797e=0_0xH03be21=1_0xH03c9a0=0S0x 073084=4640S0x 073084=41712"
+  },
+  {
+    "id": "82171",
+    "badge": "88348",
+    "title": "Heart of Vlad",
+    "desc": "Defeat Medusa and acquire Heart of Vlad relic",
+    "condition": "timeattack:15",
+    "memaddr": "0xH09797d=3_d0xH09797d=0_0xH03be21=1_0xH03c9a0=0S0x 073084=30256S0x 073084=57984"
+  },
+  {
+    "id": "82170",
+    "badge": "88347",
+    "title": "Rib of Vlad",
+    "desc": "Defeat Akmodan II and acquire the Rib of Vlad relic",
+    "condition": "timeattack:19",
+    "memaddr": "0xH09797f=3_d0xH09797f=0_0xH03be21=1_0xH03c9a0=0S0x 073084=39036S0x 073084=63724"
+  },
+  {
+    "id": "82168",
+    "badge": "88345",
+    "title": "Eye of Vlad",
+    "desc": "Defeat Death and acquire the Eye of Vlad relic",
+    "condition": "timeattack:12",
+    "memaddr": "0xH097981=3_d0xH097981=0_0xH03be21=1_0xH03c9a0=0S0x 073084=62916S0x 073084=34460"
+  },
+  {
+    "id": "82169",
+    "badge": "88346",
+    "title": "Lord of Space and Time",
+    "desc": "Defeat Galamoth in the icy domains of the Reverse Castle",
+    "condition": "timeattack:21",
+    "memaddr": "0x 073084=43244_0x 076ed6=12000.1._0xX03ca7c!=0_d0xX03ca7c=0_0xH03c9a0=0S0x 076ed6=0S0x 076ed6>12000"
+  },
+  {
+    "id": "82175",
+    "badge": "90241",
+    "title": "The End: Solitude",
+    "desc": "And the dark prince roamed the barren lands with his empty heart for all eternity",
+    "condition": "",
+    "memaddr": "0xH03c9a0=0S0xX032ac0=5252417_d0xX032ac0=4596512_0x 138458=301.1._0x 138458=60S0xX032ac0=1201953_d0xX032ac0=2376993_0x 138458=308.1._0x 138458=309"
+  },
+  {
+    "id": "82172",
+    "badge": "90243",
+    "title": "The End: Heroes Reunited",
+    "desc": "With the Belmont clan saved, the dark prince now runs toward an unknown future",
+    "condition": "",
+    "memaddr": "0xH03c9a0=0_R:0xH072efc!=128S0x 138458=328_d0x 138458=327.1._0xX032ac0=1528868_d0xX032ac0=4409380S0x 138458=349_d0x 138458=348.1._0xX032ac0=7611175_d0xX032ac0=6297383"
+  },
+  {
+    "id": "82173",
+    "badge": "90242",
+    "title": "The End: Redemption",
+    "desc": "The dark prince no longer has to carry his burden. The blessing that once brought purpose to his father is now in his path",
+    "condition": "",
+    "memaddr": "0x 138458=349_d0x 138458=348.1._0xX032ac0=7611175_d0xX032ac0=6297383_0xH03c9a0=0_R:0xH072efc!=128"
+  },
+  {
+    "id": "82150",
+    "badge": "90270",
+    "title": "Belmont Revenge",
+    "desc": "Finish the game with Richter",
+    "condition": "",
+    "memaddr": "N:0xH03c9a4!=3_R:d0x 03c774=61144_N:0xH03c9a4!=3_R:0x 03c774=61144_0xH03c9a0=1_0x 073084=8652_0x 138458=60_0xX032ac0=5252417"
+  },
+  {
+    "id": "82652",
+    "badge": "89065",
+    "title": "Vampiric Knight",
+    "desc": "Reach level 20 with Alucard",
+    "condition": "level:20",
+    "memaddr": "0xH097914!=4_d0xH097914!=4_0x 03c774!=61144_d0x 03c774!=61144_0x 073084!=0_0xH03c9a0=0_0xX097be8>=20_d0xX097be8<=19"
+  },
+  {
+    "id": "82653",
+    "badge": "89066",
+    "title": "Seasoned Dhampir",
+    "desc": "Reach level 40 with Alucard",
+    "condition": "level:40",
+    "memaddr": "0xH097914!=4_d0xH097914!=4_0x 03c774!=61144_d0x 03c774!=61144_0x 073084!=0_0xH03c9a0=0_0xX097be8>=40_d0xX097be8<=39"
+  },
+  {
+    "id": "82654",
+    "badge": "89067",
+    "title": "Prince of the Night",
+    "desc": "Reach level 60 with Alucard",
+    "condition": "level:60",
+    "memaddr": "0xH097914!=4_d0xH097914!=4_0x 03c774!=61144_d0x 03c774!=61144_0x 073084!=0_0xH03c9a0=0_0xX097be8>=60_d0xX097be8<=59"
+  },
+  {
+    "id": "83014",
+    "badge": "89848",
+    "title": "Demon Master",
+    "desc": "Train all familiars to reach level 50 or beyond",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084=0_0xH03c9a0=0_0xX097c44>=50_0xX097c50>=50_0xX097c5c>=50_0xX097c68>=50_0xX097c74>=50S0xH097976=3_d0xX097c44<50S0xH097977=3_d0xX097c50<50S0xH097978=3_d0xX097c5c<50S0xH097979=3_d0xX097c68<50S0xH09797a=3_d0xX097c74<50"
+  },
+  {
+    "id": "82650",
+    "badge": "89064",
+    "title": "Waterproof",
+    "desc": "Find the Holy Symbol in the Underground Caverns",
+    "condition": "relic:HolySymbol",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084=0_0x 073084=24148_d0xH097972=0_0xH097972!=0"
+  },
+  {
+    "id": "82182",
+    "badge": "88338",
+    "title": "Sword of Many Slashes",
+    "desc": "Obtain the elusive Crissaegrim (and now you have finished the game)",
+    "condition": "hand:Crissaegrim",
+    "memaddr": "0xH097a2e=1_d0xH097a2e=0_0xH03c9a0=0_N:0xX097c00!=164_R:d0xX097c00=164_N:0xX097c04!=164_R:d0xX097c04=164S0x 073084=59672S0x 073084=7960S0x 073084=62744S0x 073084=9496"
+  },
+  {
+    "id": "83019",
+    "badge": "89854",
+    "title": "Bloodlust Blade",
+    "desc": "With Muramasa in hands, absorb your enemies' blood 25 times in one session",
+    "condition": "",
+    "memaddr": "0xX097c40>d0xX097c40.25._P:0xX097c04!=141_0xH03c9a0=0"
+  },
+  {
+    "id": "82179",
+    "badge": "88464",
+    "title": "Family Heirloom",
+    "desc": "Restore all the equipment stolen by Death",
+    "condition": "hand:AlucardSword,AlucardShield;body:AlucardMail,DragonHelm,TwilightCloak",
+    "memaddr": "0xH03be21=1_0xH03c9a0=0S0x 073084=50724_0xT03bf1b=1_0xO03bf33=1_d0xM03bf23=0_0xM03bf23=1_0xM03bf31=1_0xR03bf47=1S0x 073084=60652_0xM03bf23=1_0xO03bf33=1_d0xT03bf1b=0_0xT03bf1b=1_0xR03bf47=1_0xM03bf31=1S0x 073084=49308_0xT03bf1b=1_0xM03bf23=1_d0xO03bf33=0_0xO03bf33=1_0xM03bf31=1_0xR03bf47=1Sd0xR03bf47=0_0xR03bf47=1_0xO03bf33=1_0xM03bf31=1_0xM03bf23=1_0xT03bf1b=1_0x 073084=55940S0x 073084=42624_0xT03bf1b=1_0xM03bf23=1_d0xM03bf31=0_0xM03bf31=1_0xO03bf33=1_0xR03bf47=1"
+  },
+  {
+    "id": "82180",
+    "badge": "88462",
+    "title": "My Precious",
+    "desc": "Find the elusive Ring of Varda",
+    "condition": "body:RingOfVarda",
+    "memaddr": "0xH097a7d>d0xH097a7d_0xH03c9a0=0_N:0xX097c14!=74_R:d0xX097c14=74_N:0xX097c18!=74_R:d0xX097c18=74S0x 073084=2080S0x 073084=58128"
+  },
+  {
+    "id": "82181",
+    "badge": "88463",
+    "title": "Breaking Thermodynamics",
+    "desc": "Buy the elusive Duplicator",
+    "condition": "body:Duplicator",
+    "memaddr": "0x 073084=38000_d0xH097a87=0_0xH097a87=1_0xH03c9a0=0_0xH09798e<=1"
+  },
+  {
+    "id": "82645",
+    "badge": "89061",
+    "title": "Master Shapeshifter",
+    "desc": "Acquire the powers to shapeshift into wolf, mist and bat",
+    "condition": "relic:SoulOfWolf,FormOfMist,SoulOfBat",
+    "memaddr": "R:0x 03c774=61144_R:d0x 03c774=61144_R:0x 03c774=6300_R:d0x 03c774=6300_0xH097968!=0_0xH09796b!=0_0xH097964!=0_0xH03c9a4=5SR:0x 073084=0_0xH097968=0.1.SR:0x 073084=0_0xH09796b=0.1.SR:0x 073084=0_0xH097964=0.1."
+  },
+  {
+    "id": "82804",
+    "badge": "89859",
+    "title": "All Powerful Being",
+    "desc": "Acquire all of the forms' upgrades",
+    "condition": "relic:SoulOfBat,EchoOfBat,ForceOfEcho,FireOfBat,SoulOfWolf,PowerOfWolf,SkillOfWolf,FormOfMist,PowerOfMist,GasCloud",
+    "memaddr": "R:d0xH097914=4_R:0xH097914=4_R:0x 097ba0=0_R:0x 03c774=61144_R:d0x 03c774=61144_R:0x 03c774=6300_R:d0x 03c774=6300_0xH03c9a4=5_0xH03c9a0=0_0xH097965!=0_0xH097966!=0_0xH097967!=0_0xH097969!=0_0xH09796a!=0_0xH09796c!=0_0xH09796d!=0SR:0x 073084=0_R:0xH03c9a4=3_d0xH097965=0.1.SR:0x 073084=0_R:0xH03c9a4=3_d0xH097966=0.1.SR:0x 073084=0_R:0xH03c9a4=3_d0xH097967=0.1.SR:0x 073084=0_R:0xH03c9a4=3_d0xH097969=0.1.SR:0x 073084=0_R:0xH03c9a4=3_d0xH09796a=0.1.SR:0x 073084=0_R:0xH03c9a4=3_d0xH09796c=0.1.SR:0x 073084=0_R:0xH03c9a4=3_d0xH09796d=0.1."
+  },
+  {
+    "id": "82153",
+    "badge": "88339",
+    "title": "Magician",
+    "desc": "Perform all spells in one session",
+    "condition": "",
+    "memaddr": "0xH073404=39.1._0xH073404=33.1._0xH073404=32.1._0xH073404=34.1._0xH073404=35.1._0xH073404=37.1._N:0xH072f28=1_0xH073406=3.1._N:0xH072f28=4_0xH073484=237.1._N:0xH072f28=4_R:0xH072f28=0_P:0xH03c9a0!=0_P:0x 097ba2!=0"
+  },
+  {
+    "id": "83318",
+    "badge": "90278",
+    "title": "Warp Wide Web",
+    "desc": "Activate every warp room with Alucard",
+    "condition": "warpsall",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084=0_R:0x 097ba0=0_R:0xH03c9a4=3_0xH03c9a0=0_A:0xM03bebc=0_A:0xN03bebc=0_A:0xO03bebc=0_A:0xP03bebc=0_A:0xQ03bebc=0_A:0xM03bebd=0_A:0xN03bebd=0_A:0xO03bebd=0_A:0xP03bebd=0_0xQ03bebd=10_A:0xM03bebc=0_A:0xN03bebc=0_A:0xO03bebc=0_A:0xP03bebc=0_A:0xQ03bebc=0_A:0xM03bebd=0_A:0xN03bebd=0_A:0xO03bebd=0_A:0xP03bebd=0_0xQ03bebd=9.1."
+  },
+  {
+    "id": "83325",
+    "badge": "90413",
+    "title": "Gourmetvania",
+    "desc": "Get all the Meal ticket exclusive delicacies",
+    "condition": "",
+    "memaddr": "0xH0979ac>=1_0xH0979cb>=1_0xH0979b3>=1_0xH0979b4>=1_0xH0979b7>=1_0xH0979bb>=1_0xH0979be>=1_0xH0979c1>=1_0xH0979bf>=1_0xH0979c0>=1_0xH03c9a0=0_R:d0x 097ba0=0_0xH09798e<=1_R:d0xH09798e>1S0xH0979ac=0.10.S0xH0979cb=0.10.S0xH0979b3=0.10.S0xH0979b4=0.10.S0xH0979b7=0.10.S0xH0979bb=0.10.S0xH0979be=0.10.S0xH0979c1=0.10.S0xH0979bf=0.10.S0xH0979c0=0.10."
+  },
+  {
+    "id": "82806",
+    "badge": "89879",
+    "title": "Sacred Body",
+    "desc": "Find all the Life Max upgrades unrelated to bosses with Alucard",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084=0_R:0xH03c9a4=3_R:0x 097ba0=0_0xH03c9a0=0_0xH03c9a4=5_A:0xN03bef2_A:0xS03bef2_A:0xM03bef3_A:0xP03bf0b_A:0xM03beec_A:0xM03beed_A:0xR03beee_A:0xM03be60_A:0xN03bef4_A:0xR03bef4_A:0xS03bef4_A:0xM03bef7_A:0xQ03bef7_A:0xQ03bf00_A:0xR03bf09_A:0xS03bf09_A:0xO03bf0e_A:0xN03befd_A:0xR03bf3f_A:0xT03bf3f_A:0xN03bf40_A:0xN03bf48_A:0xP03bf17_A:0xP03bf13_A:0xM03bf1c_A:0xS03bf3b_A:0xQ03bf30_A:0xO03bf43_A:0xM03bf20_A:0xS03bf23_A:0xQ03bf24_A:0xN03bf2c_M:0xM03bf2d=33_A:0xN03bef2_A:0xS03bef2_A:0xM03bef3_A:0xP03bf0b_A:0xM03beec_A:0xM03beed_A:0xR03beee_A:0xM03be60_A:0xN03bef4_A:0xR03bef4_A:0xS03bef4_A:0xM03bef7_A:0xQ03bef7_A:0xQ03bf00_A:0xR03bf09_A:0xS03bf09_A:0xO03bf0e_A:0xN03befd_A:0xR03bf3f_A:0xT03bf3f_A:0xN03bf40_A:0xN03bf48_A:0xP03bf17_A:0xP03bf13_A:0xM03bf1c_A:0xS03bf3b_A:0xQ03bf30_A:0xO03bf43_A:0xM03bf20_A:0xS03bf23_A:0xQ03bf24_A:0xN03bf2c_Q:0xM03bf2d<33.1."
+  },
+  {
+    "id": "82807",
+    "badge": "89880",
+    "title": "Holy Heart",
+    "desc": "Find all the Heart Max upgrades with Alucard",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084=0_R:0xH03c9a4=3_R:0x 097ba0=0_0xH03c9a0=0_0xH03c9a4=5_A:0xM03bef2_A:0xT03bef2_A:0xN03bf0b_A:0xO03beec_A:0xN03beed_A:0xO03beee_A:0xM03bef4_A:0xR03bef7_A:0xT03bf09_A:0xM03bf0a_A:0xO03bf0a_A:0xM03bf06_A:0xN03bef0_A:0xP03bf0e_A:0xS03befc_A:0xO03befd_A:0xS03bf3f_A:0xM03bf40_A:0xO03bf40_A:0xO03bf48_A:0xM03bf17_A:0xQ03bf13_A:0xP03bf1c_A:0xR03bf3b_A:0xT03bf3b_A:0xR03bf2f_A:0xN03bf31_A:0xN03bf43_A:0xP03bf1f_A:0xT03bf23_A:0xT03bf24_A:0xO03bf2c_M:0xT03bf2c=33_A:0xM03bef2_A:0xT03bef2_A:0xN03bf0b_A:0xO03beec_A:0xN03beed_A:0xO03beee_A:0xM03bef4_A:0xR03bef7_A:0xT03bf09_A:0xM03bf0a_A:0xO03bf0a_A:0xM03bf06_A:0xN03bef0_A:0xP03bf0e_A:0xS03befc_A:0xO03befd_A:0xS03bf3f_A:0xM03bf40_A:0xO03bf40_A:0xO03bf48_A:0xM03bf17_A:0xQ03bf13_A:0xP03bf1c_A:0xR03bf3b_A:0xT03bf3b_A:0xR03bf2f_A:0xN03bf31_A:0xN03bf43_A:0xP03bf1f_A:0xT03bf23_A:0xT03bf24_A:0xO03bf2c_Q:0xT03bf2c<33.1."
+  },
+  {
+    "id": "83160",
+    "badge": "89867",
+    "title": "Legendary Explorer",
+    "desc": "Explore every room of each castle",
+    "condition": "",
+    "memaddr": "R:0x 097ba0=0_R:0x 073084=0_0xH03c9a0=0_0xX06bbc0=0_0xX06bbc4=0_0xX06bbc8=0_0xX06bbcc=1280_0xX06bbd0=0_0xX06bbd4=0_0xX06bbd8=0_0xX06bbdc>=21781_0xX06bbe0=0_0xX06bbe4=0_0xX06bbe8>=16777216_0xX06bbec>=21765_0xX06bbf0=0_0xX06bbf4=0_0xX06bbf8>=16777216_0xX06bbfc>=21845_0xX06bc00=1_0xX06bc04=0_0xX06bc08>=16777216_0xX06bc0c>=21845_0xX06bc10=16389_0xX06bc14=0_0xX06bc18>=1090584576_0xX06bc1c>=1431655765_0xX06bc20>=16469_0xX06bc24=0_0xX06bc28>=1090600961_0xX06bc2c>=1426412885_0xX06bc30>=5592405_0xX06bc34>=83886080_0xX06bc38>=1426145281_0xX06bc3c>=4216149_0xX06bc40>=5526789_0xX06bc44>=83886080_0xX06bc48>=1347769601_0xX06bc4c>=0_0xX06bc50>=1347704069_0xX06bc54>=83886080_0xX06bc58>=16469_0xX06bc5c=0_0xX06bc60>=1347769621_0xX06bc64>=1431633920_0xX06bc68=83886080_0xX06bc6c=85_0xX06bc70>=1347753216_0xX06bc74>=83886080_0xX06bc78=1414878549_0xX06bc7c=1_0xX06bc80>=1342177280_0xX06bc84>=83886080_0xX06bc88=1427456001_0xX06bc8c=1_0xX06bc90>=1342242816_0xX06bc94>=83886080_0xX06bc98=1427456001_0xX06bc9c=352321617_0xX06bca0>=1347769684_0xX06bca4>=83886080_0xX06bca8=1414878549_0xX06bcac=352321537_0xX06bcb0>=1347769685_0xX06bcb4>=84148224_0xX06bcb8=16385_0xX06bcbc=1426063361_0xX06bcc0>=1347769685_0xX06bcc4>=1431633920_0xX06bcc8>=1426150485_0xX06bccc=1426083925_0xX06bcd0>=1347769685_0xX06bcd4>=1431634176_0xX06bcd8=1431655765_0xX06bcdc=64_0xX06bce0>=1342177280_0xX06bce4>=89130240_0xX06bce8=1431328085_0xX06bcec=84_0xX06bcf0>=1347747840_0xX06bcf4>=352326912_0xX06bcf8=273962325_0xX06bcfc>=1414862144_0xX06bd00>=1347748096_0xX06bd04>=21504_0xX06bd08>=352337921_0xX06bd0c>=1431639124_0xX06bd10>=1347769685_0xX06bd14>=83906561_0xX06bd18>=1431655765_0xX06bd1c>=1079006549_0xX06bd20>=1342242816_0xX06bd24>=1431650309_0xX06bd28>=1359036417_0xX06bd2c>=4216145_0xX06bd30>=1342242816_0xX06bd34>=1431655685_0xX06bd38>=1376336_0xX06bd3c>=5440_0xX06bd40>=1342177280_0xX06bd44>=4521984_0xX06bd48>=1310736_0xX06bd4c>=5571904_0xX06bd50>=1342177280_0xX06bd54>=5570816_0xX06bd58>=18087952_0xX06bd5c>=66896_0xX06bd60=0_0xX06bd64>=5570560_0xX06bd68>=18088016_0xX06bd6c>=66896_0xX06bd70=0_0xX06bd74>=1073807360_0xX06bd78>=18153488_0xX06bd7c>=1073812816_0xX06bd80=0_0xX06bd84>=1426063360_0xX06bd88>=65552_0xX06bd8c>=1342248192_0xX06bd90=0_0xX06bd94>=1426128896_0xX06bd98>=5576016_0xX06bd9c>=5376_0xX06bda0=0_0xX06bda4>=1426063360_0xX06bda8>=5510464_0xX06bdac>=1280_0xX06bdb0=0_0xX06bdb4>=1157627904_0xX06bdb8>=5526869_0xX06bdbc>=1280_0xX06bdc0=0_0xX06bdc4=0_0xX06bdc8>=1431651605_0xX06bdcc>=4216149_0xX06bdd0=0_0xX06bdd4>=16782341_0xX06bdd8>=1430344021_0xX06bddc>=1347769621_0xX06bde0=0_0xX06bde4>=5575941_0xX06bde8>=4280577_0xX06bdec>=1347748096_0xX06bdf0=0_0xX06bdf4>=1431655685_0xX06bdf8>=1430344021_0xX06bdfc=20821_0xX06be00=0_0xX06be04>=1426391040_0xX06be08>=1078002000_0xX06be0c=1431654720_0xX06be10=21845_0xX06be14>=1431633920_0xX06be18>=5264725_0xX06be1c=89391168_0xX06be20=16405_0xX06be24>=1343553536_0xX06be28=0_0xX06be2c=64_0xX06be30=0_0xX06be34=0_0xX06be38=352321536_0xX06be3c=85_0xX06be40=0_0xX06be44=0_0xX06be48=0_0xX06be4c=64_0xX06be50=0_0xX06be54=0_0xX06be58=0_0xX06be5c=64_0xX06be60=0_0xX06be64=0_0xX06be68=0_0xX06be6c=64_0xX06be70=0_0xX06be74=0_0xX06be78=16777216_0xX06be7c=80_0xX06be80=0_0xX06be84=0_0xX06be88=16777216_0xX06be8c=80_0xX06be90=0_0xX06be94=0_0xX06be98=1431590229_0xX06be9c=1431651669_0xX06bea0=64_0xX06bea4=0_0xX06bea8=1431655765_0xX06beac=1431655765_0xX06beb0=64_0xX06beb4=0_0xX06beb8=0_0xX06bebc=0_0xX06bbb0=0_0xX06bbb4=0_0xX06bbb8=0_0xX06bbbc=0S0x 03c760=1890_d0x 03c760=1889_0xX06c020=0_0xX06c024=0_0xX06c028=0_0xX06c02c=0_0xX06c030=0_0xX06c034=16777216_0xX06c038=1431655765_0xX06c03c=1431655765_0xX06c040=0_0xX06c044=16777216_0xX06c048=1431393621_0xX06c04c=1431639381_0xX06c050=0_0xX06c054=0_0xX06c058=83886080_0xX06c05c=64_0xX06c060=0_0xX06c064=0_0xX06c068=83886080_0xX06c06c=64_0xX06c060=0_0xX06c064=0_0xX06c068=83886080_0xX06c06c=64_0xX06c070=0_0xX06c074=0_0xX06c078=16777216_0xX06c07c=0_0xX06c080=0_0xX06c084=0_0xX06c088=16777216_0xX06c08c=0_0xX06c090=0_0xX06c094=0_0xX06c098=16777216_0xX06c09c=0_0xX06c0a0=0_0xX06c0a4=0_0xX06c0a8=1426063360_0xX06c0ac=84_0xX06c0b0=0_0xX06c0b4=0_0xX06c0b8=16777216_0xX06c0bc=16777216_0xX06c0c0=21525_0xX06c0c4=1426128896_0xX06c0c8=16799061_0xX06c0cc=1431635200_0xX06c0d0=21845_0xX06c0d4=1431633920_0xX06c0d8=21321045_0xX06c0dc=88097025_0xX06c0e0=20565_0xX06c0e4=0_0xX06c0e8=1430585344_0xX06c0ec=1430602069_0xX06c0f0=1347769685_0xX06c0f4=0_0xX06c0f8=4216069_0xX06c0fc=1078280448_0xX06c100=1347704064_0xX06c104=0_0xX06c108=1414878469_0xX06c10c=1430602069_0xX06c110=1343488064_0xX06c114=0_0xX06c118=1431634176_0xX06c11c=1414616405_0xX06c120=0_0xX06c124=0_0xX06c128=5242880_0xX06c12c=1431639296_0xX06c130=81_0xX06c134=0_0xX06c138=5242880_0xX06c13c=22287616_0xX06c140=85_0xX06c144=0_0xX06c148=5505024_0xX06c14c=89412864_0xX06c150=16469_0xX06c154=0_0xX06c158=5521413_0xX06c15c=67125248_0xX06c160=85_0xX06c164=0_0xX06c168=89407489_0xX06c16c=67130432_0xX06c170=16385_0xX06c174=0_0xX06c178=89145344_0xX06c17c=83891264_0xX06c180=21760_0xX06c184=0_0xX06c188=89145344_0xX06c18c=67114048_0xX06c190=4216064_0xX06c194=5_0xX06c198=22041856_0xX06c19c=67113984_0xX06c1a0=20736_0xX06c1a4=5_0xX06c1a8=22282240_0xX06c1ac=83907584_0xX06c1b0=1347769685_0xX06c1b4=16389_0xX06c1b8=1163198720_0xX06c1bc=1073823813_0xX06c1c0=1342264661_0xX06c1c4=16389_0xX06c1c8=1431635201_0xX06c1cc=1431655765_0xX06c1d0=1074069584_0xX06c1d4=1431655685_0xX06c1d8=353654101_0xX06c1dc=1073807444_0xX06c1e0=1376256_0xX06c1e4=4216069_0xX06c1e8=22304021_0xX06c1ec=1431639300_0xX06c1f0=5505108_0xX06c1f4=21765_0xX06c1f8=352321536_0xX06c1fc=1431635285_0xX06c200=5244240_0xX06c204=5_0xX06c208=16777216_0xX06c20c=1431655765_0xX06c210=4216149_0xX06c214=1431655685_0xX06c218=1426391125_0xX06c21c=1427456085_0xX06c220=21845_0xX06c224=1431655685_0xX06c228=1073741909_0xX06c22c=1073807360_0xX06c230=4176_0xX06c234=1431655685_0xX06c238=1073741908_0xX06c23c=1431655701_0xX06c240=80_0xX06c244=357913861_0xX06c248=1157627988_0xX06c24c=1073828949_0xX06c250=80_0xX06c254=16389_0xX06c258=1073741824_0xX06c25c=1073828949_0xX06c260=80_0xX06c264=5_0xX06c268=1073741824_0xX06c26c=1431655701_0xX06c270=80_0xX06c274=5526789_0xX06c278=1426063360_0xX06c27c=80_0xX06c280=21845_0xX06c284=1414878469_0xX06c288=0_0xX06c28c=1426128896_0xX06c290=80_0xX06c294=1347753221_0xX06c298=0_0xX06c29c=1079334149_0xX06c2a0=80_0xX06c2a4=1347753216_0xX06c2a8=1431634176_0xX06c2ac=1073823829_0xX06c2b0=80_0xX06c2b4=1431655680_0xX06c2b8=1431654485_0xX06c2bc=1073823809_0xX06c2c0=0_0xX06c2c4=1426128896_0xX06c2c8=1431655765_0xX06c2cc=16449_0xX06c2d0=0_0xX06c2d4=1342242816_0xX06c2d8=1431633920_0xX06c2dc=64_0xX06c2e0=0_0xX06c2e4=1073741824_0xX06c2e8=1431633920_0xX06c2ec=64_0xX06c2f0=0_0xX06c2f4=0_0xX06c2f8=1347747840_0xX06c2fc=64_0xX06c300=0_0xX06c304=0_0xX06c308=1414856704_0xX06c30c=0_0xX06c310=0_0xX06c314=0_0xX06c318=5242880_0xX06c31c=0_0xX06c328=0_0xX06c32c=0S1=2"
+  },
+  {
+    "id": "83005",
+    "badge": "90414",
+    "title": "Miserable Pile of Secrets",
+    "desc": "Find every hidden item inside breakable walls",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084=0_R:0xH03c9a4=3_R:0x 097ba0=0_0xH03c9a0=0_A:0xM03be1f=3_A:0xM03be24=3_A:0xM03bdfe=3_A:0xM03be7e=3_A:0xM03be7d=3_A:0xM03be8f=3_A:0xN03be8f=3_A:0xO03be8f=3_A:0xP03be8f=3_A:0xM03be2d=3_A:0xM03be30=3_A:0xM03be3d=3_A:0xM03be84=3_A:0xM03be85=3_A:0xM03be97=3_A:0xN03be97=3_A:0xO03be97=3_A:0xP03be97=3_A:0xM03be04=3_A:0xM03be28=3_A:0xM03be27=3_A:0xM03be45=3_A:0xM03be35=3_0xM03be37=24_A:0xM03be1f=3_A:0xM03be24=3_A:0xM03bdfe=3_A:0xM03be7e=3_A:0xM03be7d=3_A:0xM03be8f=3_A:0xN03be8f=3_A:0xO03be8f=3_A:0xP03be8f=3_A:0xM03be2d=3_A:0xM03be30=3_A:0xM03be3d=3_A:0xM03be84=3_A:0xM03be85=3_A:0xM03be97=3_A:0xN03be97=3_A:0xO03be97=3_A:0xP03be97=3_A:0xM03be04=3_A:0xM03be28=3_A:0xM03be27=3_A:0xM03be45=3_A:0xM03be35=3_0xM03be37<24.1."
+  },
+  {
+    "id": "83225",
+    "badge": "89836",
+    "title": "Transylvanian Hitman",
+    "desc": "Reveal all entries in the bestiary",
+    "condition": "",
+    "memaddr": "d0x 073084!=0_0x 073084!=0_d0x 097ba0!=0_0x 097ba0!=0_Q:0xX097bf4!=944013954_Q:0xH03c9a0=0_A:0xK03bf7c_A:0xK03bf7d_A:0xK03bf7e_A:0xK03bf7f_A:0xK03bf80_A:0xK03bf81_A:0xK03bf82_A:0xK03bf83_A:0xK03bf84_A:0xK03bf85_A:0xK03bf86_A:0xK03bf87_A:0xK03bf88_A:0xK03bf89_A:0xK03bf8a_A:0xK03bf8b_A:0xK03bf8c_A:0xK03bf8d_A:0xM03bf8e_M:0xN03bf8e=146_A:d0xK03bf7c_A:d0xK03bf7d_A:d0xK03bf7e_A:d0xK03bf7f_A:d0xK03bf80_A:d0xK03bf81_A:d0xK03bf82_A:d0xK03bf83_A:d0xK03bf84_A:d0xK03bf85_A:d0xK03bf86_A:d0xK03bf87_A:d0xK03bf88_A:d0xK03bf89_A:d0xK03bf8a_A:d0xK03bf8b_A:d0xK03bf8c_A:d0xK03bf8d_A:d0xM03bf8e_d0xN03bf8e<=145_A:d0xK03bf7c_A:d0xK03bf7d_A:d0xK03bf7e_A:d0xK03bf7f_A:d0xK03bf80_A:d0xK03bf81_A:d0xK03bf82_A:d0xK03bf83_A:d0xK03bf84_A:d0xK03bf85_A:d0xK03bf86_A:d0xK03bf87_A:d0xK03bf88_A:d0xK03bf89_A:d0xK03bf8a_A:d0xK03bf8b_A:d0xK03bf8c_A:d0xK03bf8d_A:d0xM03bf8e_d0xN03bf8e>=140"
+  },
+  {
+    "id": "83224",
+    "badge": "90416",
+    "title": "The Rarest of Monster Droppings",
+    "desc": "Reveal the rare drops of all enemies (use bestiary to keep track)",
+    "condition": "",
+    "memaddr": "0x 073084!=0_0x 097ba0!=0_d0x 097ba0!=0_0xH09798e<=1_d0xH09798e<=1_Q:0xH03c9a0=0_A:0xO03bf9c_A:0xQ03bf9c_A:0xR03bf9c_A:0xS03bf9c_B:0xO03bf9d_A:0xK03bf9d_B:0xN03bf9e_B:0xQ03bf9e_A:0xK03bf9e_A:0xK03bf9f_A:0xM03bfa0_A:0xP03bfa0_A:0xR03bfa0_A:0xS03bfa0_A:0xT03bfa0_A:0xK03bfa1_A:0xK03bfa2_B:0xO03bfa3_B:0xQ03bfa3_A:0xK03bfa3_B:0xN03bfa4_B:0xP03bfa4_A:0xK03bfa4_B:0xN03bfa5_B:0xO03bfa5_A:0xK03bfa5_B:0xT03bfa6_A:0xK03bfa6_A:0xM03bfa7_A:0xO03bfa7_A:0xR03bfa7_A:0xS03bfa7_A:0xT03bfa7_B:0xN03bfa8_B:0xQ03bfa8_A:0xK03bfa8_B:0xR03bfa9_B:0xS03bfa9_A:0xK03bfa9_B:0xO03bfaa_A:0xK03bfaa_B:0xM03bfab_B:0xS03bfab_A:0xK03bfab_A:0xR03bfac_A:0xM03bfad_A:0xN03bfad_A:0xO03bfad_A:0xQ03bfad_M:0xS03bfad=107_A:d0xO03bf9c_A:d0xQ03bf9c_A:d0xR03bf9c_A:d0xS03bf9c_B:d0xO03bf9d_A:d0xK03bf9d_B:d0xN03bf9e_B:d0xQ03bf9e_A:d0xK03bf9e_A:d0xK03bf9f_A:d0xM03bfa0_A:d0xP03bfa0_A:d0xR03bfa0_A:d0xS03bfa0_A:d0xT03bfa0_A:d0xK03bfa1_A:d0xK03bfa2_B:d0xO03bfa3_B:d0xQ03bfa3_A:d0xK03bfa3_B:d0xN03bfa4_B:d0xP03bfa4_A:d0xK03bfa4_B:d0xN03bfa5_B:d0xO03bfa5_A:d0xK03bfa5_B:d0xT03bfa6_A:d0xK03bfa6_A:d0xM03bfa7_A:d0xO03bfa7_A:d0xR03bfa7_A:d0xS03bfa7_A:d0xT03bfa7_B:d0xN03bfa8_B:d0xQ03bfa8_A:d0xK03bfa8_B:d0xR03bfa9_B:d0xS03bfa9_A:d0xK03bfa9_B:d0xO03bfaa_A:d0xK03bfaa_B:d0xM03bfab_B:d0xS03bfab_A:d0xK03bfab_A:d0xR03bfac_A:d0xM03bfad_A:d0xN03bfad_A:d0xO03bfad_A:d0xQ03bfad_d0xS03bfad<=106_A:d0xO03bf9c_A:d0xQ03bf9c_A:d0xR03bf9c_A:d0xS03bf9c_B:d0xO03bf9d_A:d0xK03bf9d_B:d0xN03bf9e_B:d0xQ03bf9e_A:d0xK03bf9e_A:d0xK03bf9f_A:d0xM03bfa0_A:d0xP03bfa0_A:d0xR03bfa0_A:d0xS03bfa0_A:d0xT03bfa0_A:d0xK03bfa1_A:d0xK03bfa2_B:d0xO03bfa3_B:d0xQ03bfa3_A:d0xK03bfa3_B:d0xN03bfa4_B:d0xP03bfa4_A:d0xK03bfa4_B:d0xN03bfa5_B:d0xO03bfa5_A:d0xK03bfa5_B:d0xT03bfa6_A:d0xK03bfa6_A:d0xM03bfa7_A:d0xO03bfa7_A:d0xR03bfa7_A:d0xS03bfa7_A:d0xT03bfa7_B:d0xN03bfa8_B:d0xQ03bfa8_A:d0xK03bfa8_B:d0xR03bfa9_B:d0xS03bfa9_A:d0xK03bfa9_B:d0xO03bfaa_A:d0xK03bfaa_B:d0xM03bfab_B:d0xS03bfab_A:d0xK03bfab_A:d0xR03bfac_A:d0xM03bfad_A:d0xN03bfad_A:d0xO03bfad_A:d0xQ03bfad_d0xS03bfad>=100"
+  },
+  {
+    "id": "83310",
+    "badge": "90260",
+    "title": "Hunter's Stamina",
+    "desc": "Find all the Life Max upgrades with Richter",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084=0_R:0xH03c9a4=3_R:0x 097ba0=0_0xH03c9a0=1_0x 097ba4=540_d0x 097ba4=530"
+  },
+  {
+    "id": "83277",
+    "badge": "90275",
+    "title": "Belmont Spirit",
+    "desc": "Use all item crashes with Richter in one session",
+    "condition": "",
+    "memaddr": "R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 097ba0=0_R:0x 073084=0_0xH03c9a0=1_N:0x 097bfc=1_A:0x 097ba8>0x 097ba8.1._10=d0x 097ba8.1._N:0x 097bfc=2_A:0x 097ba8>0x 097ba8.1._10=d0x 097ba8.1._N:0x 097bfc=3_A:0x 097ba8>0x 097ba8.1._15=d0x 097ba8.1._N:0x 097bfc=4_A:0x 097ba8>0x 097ba8.1._20=d0x 097ba8.1._N:0x 097bfc=5_A:0x 097ba8>0x 097ba8.1._15=d0x 097ba8.1._N:0x 097bfc=6_A:0x 097ba8>0x 097ba8.1._20=d0x 097ba8.1._N:0x 097bfc=7_A:0x 097ba8>0x 097ba8.1._10=d0x 097ba8.1._N:0x 097bfc=8_A:0x 097ba8>0x 097ba8.1._10=d0x 097ba8.1._N:0x 097bfc=9_A:0x 097ba8>0x 097ba8.1._20=d0x 097ba8.1."
+  },
+  {
+    "id": "83278",
+    "badge": "90276",
+    "title": "Innate Talent",
+    "desc": "Use all of Richter's physical techniques in one session",
+    "condition": "",
+    "memaddr": "R:d0x 03c774=61144_R:0x 03c774=61144_R:d0xH097914=4_R:0x 073084=0_0xH07342e=35.1._0xH07342e=140.1._0xH07342e=149.1._0xH07342e=155.1.S0xH03c9a0=1S0x 03c774=6300_0xH03c9a0=0"
+  },
+  {
+    "id": "82639",
+    "badge": "90367",
+    "title": "Unexpected Encounter",
+    "desc": "Defeat Gaibon and Slogra at the Entrance",
+    "condition": "",
+    "memaddr": "R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=56564_0xM03be25=1_d0xM03be25=0"
+  },
+  {
+    "id": "82640",
+    "badge": "89863",
+    "title": "The Secret Knuckles",
+    "desc": "Find the secret passage to the Jewel knuckles room in the Outer Wall",
+    "condition": "",
+    "memaddr": "R:d0x 03c774=61144_R:0x 03c774=61144_0x 073084=36208_d0x 073084=36720"
+  },
+  {
+    "id": "82641",
+    "badge": "90125",
+    "title": "Cycle of Life",
+    "desc": "Presentiate the life cycle of a bird",
+    "condition": "",
+    "memaddr": "R:0x 03c774=61144_R:d0x 03c774=61144_R:0x 073084=0_0x 073084=27504_0xH03be00=0.1._0xH03be00=1.1._0xH03be00=2.1._0xH03be00=3.1._0xH03be00=4.1._0xH03be00=5.1._0xH03be00=6.1._0xH03be00=7.1._0xH03be00=8.1._N:0xH03be00=0.1._d0xH03be00=8.1."
+  },
+  {
+    "id": "82642",
+    "badge": "89864",
+    "title": "Spying on Strangers",
+    "desc": "See the ferryman from the Outer Wall on a night with a clear sky",
+    "condition": "",
+    "memaddr": "R:0x 03c774!=6688_0x 073084=27504_0xH180eec=1_0x 0973f0<=373_0xH072efc=2S0xH088302=2_0xH088302=2.120.S0xH09797a=3_0xH0899c2=2_0xH0899c2=2.120.S0xH097976=3_0xH088336=2_0xH088336=2.120."
+  },
+  {
+    "id": "82162",
+    "badge": "88342",
+    "title": "Winged Beast",
+    "desc": "Reveal the hidden form of Alucard",
+    "condition": "",
+    "memaddr": "0x 07342e=32943_0xH03c9a0=0"
+  },
+  {
+    "id": "82174",
+    "badge": "88467",
+    "title": "Fashion-monger",
+    "desc": "Show off your exceptional fashion sense with both custom cloaks",
+    "condition": "",
+    "memaddr": "d0xH03c9a4!=2_0xH03c9a0=0SP:0xH00e2d1=0_0xX097c10=55_A:0xH03caa8=0_A:0xH03caac=0_A:0xH03cab0=0_A:0xH03cab4=0_A:0xH03cab8=0_0xH03cabc>0_N:0xH03caf8=1_0xX097c10=50.1.SP:0xH00e2d1=0_0xH097c10=50_0xH03caf8=1_N:0xH097c10=55_A:0xH03caa8=0_A:0xH03caac=0_A:0xH03cab0=0_A:0xH03cab4=0_A:0xH03cab8=0_0xH03cabc>0.1."
+  },
+  {
+    "id": "82167",
+    "badge": "90244",
+    "title": "Nice Money Bag",
+    "desc": "Find the black money bag hidden in the caves",
+    "condition": "",
+    "memaddr": "0xH03c9a0=0_B:d0xX097bf0_0xX097bf0>=2000_0xH03c734=2_d0xH03c734=2S0x 073084=18004S0x 073084=32292"
+  },
+  {
+    "id": "82649",
+    "badge": "90118",
+    "title": "15 cm of Self Esteem",
+    "desc": "Discreetly upgrade your height",
+    "condition": "",
+    "memaddr": "0x 073084!=0_0xH097c38!=d0xH097c38.1.S0xX097c14!=d0xX097c14_0xX097c14=88S0xX097c18!=d0xX097c18_0xX097c18=88"
+  },
+  {
+    "id": "82651",
+    "badge": "89882",
+    "title": "Spiked Menace",
+    "desc": "Destroy the Spiked Ball on the stairs of the Royal Chapel",
+    "condition": "",
+    "memaddr": "d0x 03c774!=61144_d0x 097ba0!=0_0x 0773da=0_0x 073084=59436_d0x 0773fa!=32767_d0x 0773fa!=0_T:0x 0773fa=0"
+  },
+  {
+    "id": "82152",
+    "badge": "88465",
+    "title": "Gift from the Other Side",
+    "desc": "Obtain the Grape juice from a friendly ghost",
+    "condition": "",
+    "memaddr": "0x 073084=52268_0xH0979c2>d0xH0979c2_0xH03c9a0=0"
+  },
+  {
+    "id": "82657",
+    "badge": "90273",
+    "title": "TRACULA!",
+    "desc": "Get the Alucart status to get lucky",
+    "condition": "",
+    "memaddr": "R:0x 073084=0_0xX097c0c=89S0xX097c00=168_0xX097c04=167S0xX097c00=167_0xX097c04=168"
+  },
+  {
+    "id": "82157",
+    "badge": "90116",
+    "title": "Mooo!",
+    "desc": "Extract the power of the cow from the most common shield",
+    "condition": "",
+    "memaddr": "0xH074102=0_d0xH074102=203_0xH03c9a0=0"
+  },
+  {
+    "id": "82661",
+    "badge": "89872",
+    "title": "Sword of Riches",
+    "desc": "Find the elusive Jewel sword in the hidden room",
+    "condition": "hand:JewelSword",
+    "memaddr": "R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=50932_0xH03c9a0=0_0xN03bef3=1_d0xN03bef3=0"
+  },
+  {
+    "id": "82662",
+    "badge": "89069",
+    "title": "Gears go Awry",
+    "desc": "Enter the secret room in the Clock Tower",
+    "condition": "",
+    "memaddr": "0xH03c9a0=0_0xH03c734=2S0xH138458=17_0x 073084=31704S0xH138458=56_0x 073084=29828"
+  },
+  {
+    "id": "82178",
+    "badge": "89847",
+    "title": "Hmmm, the Switch...",
+    "desc": "Matured enough to know how to press a button",
+    "condition": "",
+    "memaddr": "0xH097979=3_0xH03c9a0=0S0x 073084=47456_0xH03be3c=1_d0xH03be3c=0S0x 073084=35484_0xH03be44=1_d0xH03be44=0"
+  },
+  {
+    "id": "82177",
+    "badge": "89852",
+    "title": "Fairy Curiosity",
+    "desc": "Did she really see any cracks there?",
+    "condition": "",
+    "memaddr": "0xH03c9a0=0_0xH097978=3Sd0xX032ac0=3541297_0xX032ac0!=3541297Sd0xX032ac0=1254962_0xX032ac0!=1254962"
+  },
+  {
+    "id": "82176",
+    "badge": "88337",
+    "title": "50% of the Time, It Works Every Time",
+    "desc": "Get all the possibilities out of a Karma Coin toss in a single session",
+    "condition": "",
+    "memaddr": "N:0xH074102=24_0xH0740a0=200.1._N:0xH074102=24_0xH0740a0=216.1._d0xH074102=24_0xH074102!=24_N:0xH074102=24_0xH0740d2=96.1._N:0xH072f28=1_R:0xH072f28=0_0xH03c9a0=0"
+  },
+  {
+    "id": "82163",
+    "badge": "89875",
+    "title": "How do I Eat This?",
+    "desc": "Successfully eat a peanut",
+    "condition": "",
+    "memaddr": "0xH072efc=0_0xH03c9a0=0Sd0xH0740aa=7_0xH0740aa=0_d0xH072f76=0_0xH072f76=1_d0xH074102=35_0xH074102=0Sd0xH074166=7_0xH074166=0_d0xH072f76=0_0xH072f76=1_d0xH0741be=35_0xH0741be=0Sd0xH0742de=7_0xH0742de=0_d0xH072f76=0_0xH072f76=1_d0xH07427a=35_0xH07427a=0Sd0xH074222=7_0xH074222=0_d0xH072f76=0_0xH072f76=1_d0xH074336=35_0xH074336=0"
+  },
+  {
+    "id": "82772",
+    "badge": "89876",
+    "title": "Shake, Old One!",
+    "desc": "Acquire all the secret items held by the master librarian",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=38000_A:0xM03be60=1_A:0xN03be60=1_A:0xO03be60=1_0xP03be60=4_A:0xM03be60=1_A:0xN03be60=1_A:0xO03be60=1_0xP03be60!=4.1."
+  },
+  {
+    "id": "83320",
+    "badge": "90305",
+    "title": "Red Undead Redemption",
+    "desc": "Summon some red dawn warriors from the otherworld",
+    "condition": "",
+    "memaddr": "0xH03c9a0=0_0xX097c00=17_0xX097c04=17S0x 074126>=33056_0xH074127=129S0x 07429e>=33056_0xH07429f=129S0x 07435a>=33056_0xH07435b=129S0x 074416>=33056_0xH074417=129S0x 0744d2>=33056_0xH0744d3=129S0x 07458e>=33056_0xH07458f=129S0x 07464a>=33056_0xH07464b=129S0x 074706>=33056_0xH074707=129S0x 07487e>=33056_0xH07487f=129S0x 07493a>=33056_0xH07493b=129S0x 074b6e>=33056_0xH074b6f=129"
+  },
+  {
+    "id": "83161",
+    "badge": "90126",
+    "title": "Runic Secret",
+    "desc": "Read the forbidden inscription of the flying sword",
+    "condition": "",
+    "memaddr": "R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084=0_0xH03c9a0=0S0x 0740aa=8_0x 0740f0!=0_0x 0740f0!=d0x 0740f0S0x 074456=8_0x 07449c!=0_0x 07449c!=d0x 07449c"
+  },
+  {
+    "id": "83321",
+    "badge": "90306",
+    "title": "Cat Therapy",
+    "desc": "Let the cat heal your wounds",
+    "condition": "",
+    "memaddr": "0xH075d78=120_0xH075d7a=1_0xX097c08=43_0xH03c9a0=0S0x 073084=53364S0x 073084=42100S0x 073084=62580"
+  },
+  {
+    "id": "83322",
+    "badge": "90415",
+    "title": "Moment of Reflection",
+    "desc": "And having explored all of the castle rooms, his son took a short nap... (1890 rooms required no more no less!!!)",
+    "condition": "",
+    "memaddr": "0x 07342e=223_d0xH0739de=1_0xH03c9a0=0_0xH0739de=0_0x 03c760=1890_0xH03c734=2_0xH06c17b>0"
+  },
+  {
+    "id": "83317",
+    "badge": "90277",
+    "title": "Blazing Blood",
+    "desc": "Activate the Belmont secret technique",
+    "condition": "",
+    "memaddr": "R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084=0_R:0x 097ba0=0_N:0x 097bfc=0_A:0x 097ba8>0x 097ba8.1._15=d0x 097ba8S0xH03c9a0=1S0x 03c774=6300_0xH03c9a0=0"
+  },
+  {
+    "id": "82636",
+    "badge": "90264",
+    "title": "Vampire Killer",
+    "desc": "Defeat Dracula in the prologue without taking any damage (no heart usage)",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=45776_Z:0x 073074!=0_P:d0x 097ba0>0x 097ba0.1._Z:0x 073074!=0_P:d0x 097ba8>0x 097ba8.1._T:0xH13798c=0_T:p0xH13798c>0_T:0xH03c734=3_d0xH03c734=2"
+  },
+  {
+    "id": "82638",
+    "badge": "90265",
+    "title": "Castle of Rage",
+    "desc": "Defeat Gaibon and Slogra damageless without any equipment on both hands (no MP or Heart usage or Talisman)",
+    "condition": "",
+    "memaddr": "d0xH097914!=4_0xH097914!=4_d0x 03c774!=61144_0x 03c774!=61144_P:0x 097c14=83.1._P:0x 097c18=83.1._P:0xX097c00!=0.1._P:0xX097c04!=0.1._0xH03c9a0=0_d0xX03ca40=0_T:0xX03ca40!=0SP:0x 1375bc=10160_R:0x 1375bc!=10160SR:0xH138458!=29_P:d0x 097ba0>0x 097ba0.1._P:d0x 097ba8>0x 097ba8.1._P:d0x 097bb0>0x 097bb0.1._N:0xH03c9a4!=2_N:d0xX097c00=71_P:0xX097c00=0.1._N:0xH03c9a4!=2_N:d0xX097c04=71_P:0xX097c04=0.1."
+  },
+  {
+    "id": "82644",
+    "badge": "90266",
+    "title": "Rusty Duel",
+    "desc": "Defeat the Doppleganger10 damageless with the Red Rust (no MP or Heart usage or Talisman)",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_P:d0x 097ba0>0x 097ba0.1._P:d0x 097ba8>0x 097ba8.1._P:d0x 097bb0>0x 097bb0.1._P:0x 097c14=83.1._P:0x 097c18=83.1._0x 073084=50792_T:0xX03ca30!=0_d0xX03ca30=0SP:0x 073084=50792_R:0x 073084!=50792SP:0x 073074>=65.1._R:0x 073074<=64SP:0x 097c00!=26.1."
+  },
+  {
+    "id": "82648",
+    "badge": "90267",
+    "title": "Dancing Water",
+    "desc": "Defeat Scylla damageless only equiped with a Jewel knuckles (no MP or Heart usage, Talisman or familiars)",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_P:d0x 097ba0>0x 097ba0.1._P:d0x 097ba8>0x 097ba8.1._P:d0x 097bb0>0x 097bb0.1._P:0x 097c14=83.1._P:0x 097c18=83.1._P:0xH097976=3.1._P:0xH097977=3.1._P:0xH097978=3.1._P:0xH097979=3.1._P:0xH09797a=3.1._0x 073084=60688_T:0xX03ca3c!=0_d0xX03ca3c=0SP:0x 073084=60688_R:0x 073084!=60688SP:0x 073074>384_P:0xX097c00!=97.1._P:0xX097c04!=0.1.SP:0x 073074>384_P:0xX097c00!=0.1._P:0xX097c04!=97.1."
+  },
+  {
+    "id": "83245",
+    "badge": "90247",
+    "title": "No Longer a Horse, but Still no Griffin",
+    "desc": "Use all of Richter's physical techniques to damage and defeat Hippogryph (damageless, no whip or heart usage)",
+    "condition": "",
+    "memaddr": "R:0x 073084!=61572_R:0x 07342e=44_R:0x 07342e=53_0xX03ca44!=0_d0xX03ca44=0_0xH03c9a0=1_R:0x 097ba0<d0x 097ba0_R:0x 097ba8<d0x 097ba8_N:0xH073404=24_0x 076ed6<d0x 076ed6.1._N:0xH073404=8_0x 076ed6<d0x 076ed6.1._R:0xH073404=20_R:0x 07342e=39_R:0x 07342e=40Sd0x 073084=43052.1._N:0xH073404=23_0x 076ed6<d0x 076ed6.1.Sd0x 073084=48172.1._N:0xH073404=23_0x 076ed6<d0x 076ed6.1.Sd0x 073084=43052.1._N:0xH073404=26_0x 076ed6<d0x 076ed6.1.Sd0x 073084=48172.1._N:0xH073404=26_0x 076ed6<d0x 076ed6.1."
+  },
+  {
+    "id": "82770",
+    "badge": "90257",
+    "title": "Cursed Battle",
+    "desc": "Defeat Karasuman damageless with Tyrfing and Leather shield (no MP or Heart usage, Talisman, dive kick or familiars)",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_P:d0x 097ba0>0x 097ba0.1._P:d0x 097ba8>0x 097ba8.1._P:d0x 097bb0>0x 097bb0.1._P:0x 097c14=83.1._P:0x 097c18=83.1._N:0x 07342e=115_P:d0x 076ed6!=0x 076ed6.1._0x 073084=14296_T:0xX03ca50!=0_d0xX03ca50=0SP:0x 073084=14296_R:0x 073084!=14296SP:0x 076ed6=500_P:0xX097c00!=83.1._P:0xX097c04!=5.1._P:0xH097976=3.1._P:0xH097977=3.1._P:0xH097978=3.1._P:0xH097979=3.1._P:0xH09797a=3.1.SP:0x 076ed6=500_P:0xX097c00!=5.1._P:0xX097c04!=83.1._P:0xH097976=3.1._P:0xH097977=3.1._P:0xH097978=3.1._P:0xH097979=3.1._P:0xH09797a=3.1."
+  },
+  {
+    "id": "83323",
+    "badge": "90308",
+    "title": "Arena Shenanigans",
+    "desc": "Defeat Minotaurus and Werewolf with Alucard damageless with Tyrfing and Leather shield (no Hearts, spells or Talisman)",
+    "condition": "",
+    "memaddr": "R:0x 073084!=17172_T:0xX03ca38!=0_T:d0xX03ca38=0_R:0xX097ba0<d0xX097ba0_A:d0x 076f92_d0x 0771c6=0.1._R:0xH073404=32_R:0xH073404=33_R:0xH073404=34_R:0xH073404=35_R:0xH073404=37_R:0xH073404=39_R:0xH09796d=3_R:0x 097ba8<d0x 097ba8SA:0x 076f92_P:0x 0771c6=560_P:0xX097c00=5_R:0xX097c00!=83_R:0xX097c04!=5_R:0xX097c14=83_R:0xX097c18=83SA:0x 076f92_P:0x 0771c6=560_P:0xX097c00=83_R:0xX097c00!=5_R:0xX097c04!=83_R:0xX097c14=83_R:0xX097c18=83"
+  },
+  {
+    "id": "82660",
+    "badge": "90268",
+    "title": "Axe Lord vs Vampire Lord",
+    "desc": "Using the Axe Armor, defeat Olrox taking no more than 3 hits (no Talisman or familiars)",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_P:d0x 097ba0>0x 097ba0.4._P:0x 097c14=83.1._P:0x 097c18=83.1._0x 073084=29096_T:0xX03ca2c!=0_d0xX03ca2c=0SP:0x 073084=29096_R:0x 073084!=29096SP:0x 073074<229.1._R:0x 073074>=229SP:0x 077a96=666_P:0xX097c0c!=25.1._P:0xH097976=3.1._P:0xH097977=3.1._P:0xH097978=3.1._P:0xH097979=3.1._P:0xH09797a=3.1."
+  },
+  {
+    "id": "82664",
+    "badge": "90271",
+    "title": "Wolf vs Dog",
+    "desc": "Defeat Cerberos damageless only using the Soul of Wolf (no Talisman)",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_P:d0x 097ba0>0x 097ba0.1._P:0x 097c14=83.1._P:0x 097c18=83.1._0x 073084=32800_0xH03c9a0=0_T:0xX03ca5c!=0_d0xX03ca5c=0SP:0x 073084=32800_R:0x 073084!=32800SP:0x 076ed6=800_P:0xO072f28!=1.1."
+  },
+  {
+    "id": "83246",
+    "badge": "90248",
+    "title": "Whip! Whip 'em Good!",
+    "desc": "Defeat Granfaloon with Richter without taking damage (no heart usage)",
+    "condition": "",
+    "memaddr": "d0x 073084=38136.1._R:0x 073084!=19608_0xX03ca34!=0_d0xX03ca34=0_0xH03c9a0=1_R:0x 097ba0<d0x 097ba0_R:0x 097ba8<d0x 097ba8_R:0xH073404=20"
+  },
+  {
+    "id": "82771",
+    "badge": "90258",
+    "title": "Nightmare Beauty",
+    "desc": "Defeat Succubus damageless with Tyrfing and Leather shield (no MP or Heart usage, Talisman, dive kick or familiars)",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_P:d0x 097ba0>0x 097ba0.1._P:d0x 097ba8>0x 097ba8.1._P:d0x 097bb0>0x 097bb0.1._P:0x 097c14=83.1._P:0x 097c18=83.1._N:0x 07342e=115_P:d0x 076ed6!=0x 076ed6.1._0x 073084=46408_T:0xX03ca4c!=0_d0xX03ca4c=0SP:0x 073084=46408_R:0x 073084!=46408SN:0xH03c8b8=0_R:0x 073084=46408_N:0xH03c8b8=1_P:0x 073084=46408.1.SP:0x 076ed6=666_P:0xX097c00!=83.1._P:0xX097c04!=5.1._P:0xH097976=3.1._P:0xH097977=3.1._P:0xH097978=3.1._P:0xH097979=3.1._P:0xH09797a=3.1.SP:0x 076ed6=666_P:0xX097c00!=5.1._P:0xX097c04!=83.1._P:0xH097976=3.1._P:0xH097977=3.1._P:0xH097978=3.1._P:0xH097979=3.1._P:0xH09797a=3.1."
+  },
+  {
+    "id": "82158",
+    "badge": "90272",
+    "title": "Shaft Floor is Lava",
+    "desc": "Defeat Shaft's orb damageless w_o touching the floor after the first hit(divekick only,no familiar,spells,bat form,hearts usage or talism)",
+    "condition": "",
+    "memaddr": "0x 073084=63392_R:0x 097ba0<d0x 097ba0_0xH078656=10.1._T:0xH078656=0_T:d0xH078656=1_d0xH078656=0.1._0xH03c9a0=0_R:0xH073404=35_R:0xH072f28=1_R:0xH074102!=0_R:0x 097ba8<d0x 097ba8SR:0xH0973f4=183_P:0xH078656=10_R:0xH097976=3_R:0xH097977=3_R:0xH097979=3_R:0xH09797a=3_R:0xH09796d=3_R:0xX097c14=83_R:0xX097c18=83"
+  },
+  {
+    "id": "83247",
+    "badge": "90249",
+    "title": "I was Born in Castlevania",
+    "desc": "Defeat Darkwing Bat with Richter damageless and using only the whip (no heart, uppercut, dash or slide usage)",
+    "condition": "",
+    "memaddr": "R:0x 073084!=12420_0xX03ca78!=0_d0xX03ca78=0_0xH03c9a0=1_R:0x 097ba0<d0x 097ba0_R:0x 097ba8<d0x 097ba8_R:0xH073404=20_R:0xH073404=8_R:0xH073404=23_R:0xH073404=26_R:0xH073404=24Sd0x 073084=13444.1.Sd0x 073084=56964.1.Sd0x 073084=22644.1."
+  },
+  {
+    "id": "82803",
+    "badge": "90263",
+    "title": "Pride of Michelangelo",
+    "desc": "Defeat the Medusa damageless with the Nunchaku (no MP or Heart usage, Talisman, dive kick or familiars)",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_P:d0x 097ba0>0x 097ba0.1._P:d0x 097ba8>0x 097ba8.1._P:d0x 097bb0>0x 097bb0.1._P:0x 097c14=83.1._P:0x 097c18=83.1._N:0x 07342e=115_P:d0x 076ed6!=0x 076ed6.1._0x 073084=30256_T:0xX03ca64!=0_d0xX03ca64=0SP:0x 073084=30256_R:0x 073084!=30256SP:0x 076ed6=1100_P:0xX097c00!=21.1._P:0xH097976=3.1._P:0xH097977=3.1._P:0xH097978=3.1._P:0xH097979=3.1._P:0xH09797a=3.1."
+  },
+  {
+    "id": "82800",
+    "badge": "90261",
+    "title": "Castle of Rage II",
+    "desc": "Defeat The Creature damageless without any equipment on both hands (no MP or Heart usage, Talisman or familiars)",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_P:d0x 097ba0>0x 097ba0.1._P:d0x 097ba8>0x 097ba8.1._P:d0x 097bb0>0x 097bb0.1._P:0x 097c14=83.1._P:0x 097c18=83.1._0xH03c9a0=0_0x 073084=41712_T:0xX03ca68!=0_d0xX03ca68=0SP:0x 073084=41712_R:0x 073084!=41712SP:0x 076ed6=1100_P:0xX097c00!=0.1._P:0xX097c04!=0.1._P:0xH097976=3.1._P:0xH097977=3.1._P:0xH097978=3.1._P:0xH097979=3.1._P:0xH09797a=3.1."
+  },
+  {
+    "id": "83249",
+    "badge": "90251",
+    "title": "Can You Whip a Fly?",
+    "desc": "Defeat Beezelbub with Richter without taking damage (no heart usage)",
+    "condition": "",
+    "memaddr": "R:0x 073084!=40764_0xX03ca48!=0_d0xX03ca48=0_0xH03c9a0=1_R:0x 097ba0<d0x 097ba0_R:0x 097ba8<d0x 097ba8_R:0xH073404=20Sd0x 073084=45324.1.Sd0x 073084=27916.1."
+  },
+  {
+    "id": "82801",
+    "badge": "90262",
+    "title": "Axe Lord vs Pharaoh",
+    "desc": "Using the Axe Armor, defeat Akmodan II damageless (no Talisman or familiars)",
+    "condition": "",
+    "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_P:d0x 097ba0>0x 097ba0.1._P:0x 097c14=83.1._P:0x 097c18=83.1._0x 073084=39036_T:0xX03ca74!=0_d0xX03ca74=0SP:0x 073084=39036_R:0x 073084!=39036SP:0x 077a96=1200.1._R:1=1SP:0x 077a96=1200_P:0xX097c0c!=25.1._P:0xH097976=3.1._P:0xH097977=3.1._P:0xH097978=3.1._P:0xH097979=3.1._P:0xH09797a=3.1."
+  },
+  {
+    "id": "83248",
+    "badge": "90250",
+    "title": "Family Matters",
+    "desc": "Defeat the fake heroes with Richter without taking damage (no heart usage)",
+    "condition": "",
+    "memaddr": "R:0x 073084!=47404_0xX03ca54!=0_d0xX03ca54=0_0xH03c9a0=1_R:0x 097ba0<d0x 097ba0_R:0xH073404=20_R:0xH073404=27_R:0xH073404=18_R:0xH073404=19_R:0xH073404=21_R:0x 097ba8<d0x 097ba8Sd0x 073084=15476.1.Sd0x 073084=19060.1."
+  },
+  {
+    "id": "83324",
+    "badge": "90309",
+    "title": "Death of Death",
+    "desc": "Defeat Death damageless with Tyrfing and Leather sh. (ATT<=35 and no heart, spells, morph, familiars, Talisman or potions)",
+    "condition": "",
+    "memaddr": "R:0x 073084!=62916_T:0xX03ca58!=0_d0xX03ca58=0_d0x 073084=33436.1._R:0xX097ba0<d0xX097ba0_R:0xH073404=32_R:0xH073404=33_R:0xH073404=34_R:0xH073404=35_R:0xH073404=37_R:0xH073404=39_R:0xH09796d=3_R:0x 097ba8<d0x 097ba8_R:0x 097c0c=25SP:0x 076ed6=888_P:0xX097c00=5_R:0xX097c00!=83_R:0xX097c04!=5SP:0x 076ed6=888_P:0xX097c00=83_R:0xX097c00!=5_R:0xX097c04!=83SP:0x 076ed6=888_R:d0xX097c1c>=38_R:d0xX097c20>=38_R:0xH097976=3_R:0xH097977=3_R:0xH097979=3_R:0xH09797a=3_R:0x 13982c!=0_R:0x 139838!=0_R:0xH072f28=1_R:0xH072f28=2_R:0xH072f28=4_0xH138458=15_R:0xX097c14=83_R:0xX097c18=83"
+  },
+  {
+    "id": "83015",
+    "badge": "90252",
+    "title": "Was That Really a Boss?",
+    "desc": "Defeat Galamoth with Alucard equiped with his sword and Leather sh. damageless (no morph, platforms, Talisman or Beryl circlet)",
+    "condition": "",
+    "memaddr": "d0x 073084=20084.1._0x 073084=43244_0x 076ed6=12000.1._0xX03ca7c!=0_d0xX03ca7c=0_R:0xX097ba0<d0xX097ba0_N:0x 0973f0>457_R:0x 0973f4=247.1._0xH03c9a0=0SP:0x 076ed6=12000_R:0xH072f28=2_R:0xH072f28=1_R:0xH072f28=4_R:0xX097c08=42_R:0xX097c14=83_R:0xX097c18=83_0xH138458=15SP:0x 076ed6=12000_P:0xX097c00=5_R:0xX097c00!=123_R:0xX097c04!=5SP:0x 076ed6=12000_P:0xX097c00=123_R:0xX097c00!=5_R:0xX097c04!=123"
+  },
+  {
+    "id": "83016",
+    "badge": "90253",
+    "title": "In the Name of my Mother",
+    "desc": "Defeat Dracula with Alucard damageless and barehanded (ATT<=105 and no hearts, morphs, familiar or Talisman)",
+    "condition": "",
+    "memaddr": "d0x 073084=8652.1._0x 073084=27872_0x 076ed6=10000.1._R:0xX097ba0<d0xX097ba0_0xH03c9a0=0_R:0xH072f28=1_R:0xH072f28=2_R:0xH072f28=4_R:0x 097ba8<d0x 097ba8SP:0x 076ed6=10000_R:0xX097c00!=0_R:0xX097c04!=0_0xH072efc=128_d0xH072efc=0SP:0x 076ed6=10000_R:0xX097c00!=0_R:0xX097c04!=0_T:0x 138458=292_d0x 138458=58SP:0x 076ed6=10000_R:0xH097976=3_R:0xH097977=3_R:0xH097979=3_R:0xH09797a=3_R:0xX097c1c>105_R:0xX097c20>105_0xH138458=15_R:0xX097c14=83_R:0xX097c18=83"
+  },
+  {
+    "id": "83308",
+    "badge": "90259",
+    "title": "Whipping Darkness",
+    "desc": "Defeat Shaft with Richter without being damaged more than 3 times (no item crash)",
+    "condition": "",
+    "memaddr": "R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 097ba0=0_R:d0x 097ba0=0_0xH03c9a0=1_0x 073084=8652_0x 0730c8=512_T:0xH076ec4=4SP:0x 073084=8652_R:0x 073084!=8652SP:0x 0730c8=512_R:0x 0730c8=768SP:d0x 097ba0>0x 097ba0.4._N:0x 097bfc=1_A:0x 097ba8_P:10=d0x 097ba8.1._N:0x 097bfc=2_A:0x 097ba8_P:10=d0x 097ba8.1._N:0x 097bfc=3_A:0x 097ba8_P:15=d0x 097ba8.1._N:0x 097bfc=4_A:0x 097ba8_P:20=d0x 097ba8.1._N:0x 097bfc=5_A:0x 097ba8_P:15=d0x 097ba8.1._N:0x 097bfc=6_A:0x 097ba8_P:20=d0x 097ba8.1._N:0x 097bfc=7_A:0x 097ba8_P:10=d0x 097ba8.1._N:0x 097bfc=8_A:0x 097ba8_P:10=d0x 097ba8.1._N:0x 097bfc=9_A:0x 097ba8_P:20=d0x 097ba8.1."
+  },
+  {
+    "id": "82164",
+    "badge": "89844",
+    "title": "Acrolucard",
+    "desc": "Break at least 11 candles without touching the ground in Clock Tower's outdoor section (no morph, Power of Sire, spells or high jumps)",
+    "condition": "",
+    "memaddr": "R:0x 07342e=116_0xH072efc=0_R:0x 07342e=1_R:0x 07342e=159_R:0x 07342e=200_N:0xH1397f8=95_d0xH1397f8!=95.11._N:0x 07342e>=41_R:0x 07342e<=55_R:0x 097bb0<d0x 097bb0_N:0xH072f20=1_R:0xH072f20=0_0x 073084=40408_R:0xH072f28=1_R:0xH072f28=2_R:0xH072f28=4_0xH03c9a0=0_R:0x 07342e=117_R:0xH074102=72_R:d0xH074102=72"
+  },
+  {
+    "id": "82159",
+    "badge": "90274",
+    "title": "Blindfolded Maze",
+    "desc": "Pass through the Catacomb's dark room and turn on the light without being damaged or using Bat Echo or Mist form",
+    "condition": "",
+    "memaddr": "R:0x 075684=48888_0x 0973f0<103.1._R:0x 073084!=12024_0xH03be2e=1_d0xH03be2e=0_0xH03c9a0=0_R:0x 097ba0<d0x 097ba0_R:0xH072f28=2_0xS06be9f=0_R:0xX097c0c=14"
+  },
+  {
+    "id": "82161",
+    "badge": "89851",
+    "title": "Wolf Run",
+    "desc": "In the Entrance, kill 13 enemies in a row using the Power of Wolf without stopping",
+    "condition": "",
+    "memaddr": "0xX097bf4>d0xX097bf4.13._R:0xH073484<226_R:0xH072f28!=4_0xH03c9a0=0_R:0xH138458!=15"
+  },
+  {
+    "id": "82160",
+    "badge": "89874",
+    "title": "Nice Flight",
+    "desc": "Wing smash consecutively for 8 seconds (no pausing allowed)",
+    "condition": "",
+    "memaddr": "P:d0xH03c9a4=5_R:0x 072f28!=257_0xH097c38!=d0xH097c38.8._0xH072efc=0_0xH03c9a0=0_R:0xH03c9a4=2_R:0xH03c9a4=4_R:d0xH03c9a4=4_R:0x 03c774=61144_R:d0x 03c774=61144_P:0xH03c734!=2_N:d0x 072f2c=0x 072f2c_R:0x 072f2c=265.1."
+  },
+  {
+    "id": "83226",
+    "badge": "89846",
+    "title": "Silent, Yet Deadly",
+    "desc": "Kill 25 enemies in a row without leaving Poison Gas form",
+    "condition": "",
+    "memaddr": "B:0xX097bf4_C:0xX097bf4=2_B:0xX097bf4_C:0xX097bf4=3_B:0xX097bf4_C:0xX097bf4=4_B:0xX097bf4_C:0xX097bf4=5_0xX097bf4>d0xX097bf4.25._R:0xH072f28!=2"
+  },
+  {
+    "id": "83250",
+    "badge": "90124",
+    "title": "Lucky 3's",
+    "desc": "On Luck Mode, reach the librarian with Kills <=33, Max HP<=33, Lvl<= 9 and without dying (no Death skip or Cube of Zoe)",
+    "condition": "",
+    "memaddr": "0x 073084=45776.1._0x 073084=13880.1._0x 073084=38000_d0x 073084=39024_0xH03c9a0=0_0xH03be21=1_0xH09796e=0_0xX097964=0_0xH097969=0_0x 09796a=0_0x 09796c=0_0xX097970=0_0xX097974=0_0xL097978=0_0xH09797d=0_0xH09797e=0_0xH09797f=0_0xH097980=0_0xH097981=0_0xX097ba4<=33_0xX097bf4<=33_0xX097be8<=9_0xX097bc4=99_R:0xX097ba0=0"
+  },
+  {
+    "id": "83315",
+    "badge": "90246",
+    "title": "Rondo of Blood Gaiden",
+    "desc": "Finish the game as Richter in one session defeating all the bosses and without using save points to refill your health",
+    "condition": "",
+    "memaddr": "R:0x 097ba0=0_N:0xH03c8b8=0_R:d0x 097ba0<0x 097ba0_N:0x 073084=40504_N:0xH03c9a0=1_0xH03be23=0.1._0x 073084=8652_0xX032ac0=5252417_0xX03ca40!=0_0xX03ca30!=0_0xX03ca6c!=0_0xX03ca3c!=0_0xX03ca44!=0_0xX03ca50!=0_0xX03ca2c!=0_0xX03ca5c!=0_0xX03ca34!=0_0xX03ca78!=0_0xX03ca64!=0_0xX03ca68!=0_0xX03ca74!=0_0xX03ca54!=0_0xX03ca48!=0_0xX03ca70!=0_0xX03ca7c!=0_0x 138458=60_C:0xX03ca40!=0.1._C:0xX03ca30!=0.1._C:0xX03ca6c!=0.1._C:0xX03ca3c!=0.1._C:0xX03ca44!=0.1._C:0xX03ca50!=0.1._C:0xX03ca2c!=0.1._C:0xX03ca5c!=0.1._C:0xX03ca34!=0.1._C:0xX03ca78!=0.1._C:0xX03ca64!=0.1._C:0xX03ca68!=0.1._C:0xX03ca74!=0.1._C:0xX03ca54!=0.1._C:0xX03ca48!=0.1._C:0xX03ca70!=0.1._C:0xX03ca7c!=0.1._M:0=1.17._N:0xX097c30=0_N:0xX097c34=0_N:0xX097c38=0_N:d0xX097c3c>0_N:d0xX097c3c<=3_N:0xX097c3c>3_R:0xX097c3c<=6_A:0xH097c30_A:0xH097c34_A:0xH097c38_N:0xH097c3c>0_Q:0xH03c9a0=1_N:0x 073084=34872_N:0xH03c9a0=1_N:0xX097c30=0_N:0xX097c34=0_N:0xX097c38=0_N:d0xX097c3c>0_N:d0xX097c3c<=4_N:0xX097c3c>4_Q:0xX097c3c<=7.1."
+  }
+]

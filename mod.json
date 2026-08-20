@@ -1,0 +1,8 @@
+{
+    "id": "sotnachievements",
+    "name": "Achievements",
+    "version": "0.1.0",
+    "author": "mxd",
+    "description": "Achievements for Symphony of the Night.\n\nIn-game unlock banner viewer, achievements viewer and retroactive unlocking from your existing save (not compatible with all achievements in the game).",
+    "dependencies": []
+}
