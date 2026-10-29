@@ -14,8 +14,8 @@ It puts the whole RetroAchievements SotN set (106 achievements) right in the gam
 
 ## Install
 
-1. Grab the latest release zip.
-2. Drop it in your SymphonyRecomp `mods` folder so you get `mods/sotnachievements/`.
+1. Grab the latest release zip, and unzip it.
+2. Drop the folder in your SymphonyRecomp `mods` folder so you get `mods/sotnachievements/`.
 3. Start the game and open the Achievements menu.
 
 ## Notes
@@ -34,4 +34,4 @@ It's all in [`assets/achievements.json`](assets/achievements.json). Each entry h
 - SymphonyRecomp is by BlackLabelHQ.
 - Mod by mxd.
 
-The badges and achievement text belong to RetroAchievements and the set's authors. They're included so the mod matches that set. See LICENSE for the details.
+The badges and achievement text belong to RetroAchievements and the set's authors. They are included so the mod matches that set. See LICENSE for the details.
