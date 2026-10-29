@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 mxd
+Copyright (c) 2026 mxd, kia100
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,6 +24,6 @@ SOFTWARE.
 
 This license covers the mod's own code only. The achievement badge images
 (assets/*.png) and the achievement titles and descriptions are from the
-RetroAchievements Symphony of the Night set (game 11240) and stay the property
-of RetroAchievements and the set's authors. They're bundled here so the mod
-works with that set, not relicensed.
+RetroAchievements Symphony of the Night set (game 11240) and are property
+of RetroAchievements and the set's authors. They are bundled here so the mod
+works with that set, and are not relicensed.
