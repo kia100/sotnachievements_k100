@@ -131,7 +131,7 @@
     "id": "83018",
     "badge": "90366",
     "title": "Echoes of the Past",
-    "desc": "Defeat the fake heroes of long past in the Reverce Colosseum with Alucard",
+    "desc": "Defeat the fake heroes of long past in the Reverse Colosseum with Alucard",
     "condition": "timeattack:11",
     "memaddr": "0x 073084=47404_0xX03ca54!=0_d0xX03ca54=0_0xH03be21=1_0xH03c9a0=0"
   },
@@ -147,7 +147,7 @@
     "id": "82802",
     "badge": "89877",
     "title": "Beyond the Mirror",
-    "desc": "Defeat Doppleganger40 in the Reverce Caverns with Alucard",
+    "desc": "Defeat Doppleganger40 in the Reverse Caverns with Alucard",
     "condition": "timeattack:18",
     "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=51008_0xH03c9a0=0_0xX03ca70!=0_d0xX03ca70=0"
   },
@@ -226,7 +226,7 @@
   {
     "id": "82150",
     "badge": "90270",
-    "title": "Belmont Revenge",
+    "title": "Belmont's Revenge",
     "desc": "Finish the game with Richter",
     "condition": "",
     "memaddr": "N:0xH03c9a4!=3_R:d0x 03c774=61144_N:0xH03c9a4!=3_R:0x 03c774=61144_0xH03c9a0=1_0x 073084=8652_0x 138458=60_0xX032ac0=5252417"
@@ -707,7 +707,7 @@
     "id": "82158",
     "badge": "90272",
     "title": "Shaft Floor is Lava",
-    "desc": "Defeat Shaft's orb damageless w_o touching the floor after the first hit(divekick only,no familiar,spells,bat form,hearts usage or talism)",
+    "desc": "Defeat Shaft's orb damageless w_o touching the floor after the first hit (divekick only, no familiar, spells, bat form, hearts usage or Talisman)",
     "condition": "",
     "memaddr": "0x 073084=63392_R:0x 097ba0<d0x 097ba0_0xH078656=10.1._T:0xH078656=0_T:d0xH078656=1_d0xH078656=0.1._0xH03c9a0=0_R:0xH073404=35_R:0xH072f28=1_R:0xH074102!=0_R:0x 097ba8<d0x 097ba8SR:0xH0973f4=183_P:0xH078656=10_R:0xH097976=3_R:0xH097977=3_R:0xH097979=3_R:0xH09797a=3_R:0xH09796d=3_R:0xX097c14=83_R:0xX097c18=83"
   },
@@ -771,7 +771,7 @@
     "id": "83015",
     "badge": "90252",
     "title": "Was That Really a Boss?",
-    "desc": "Defeat Galamoth with Alucard equiped with his sword and Leather sh. damageless (no morph, platforms, Talisman or Beryl circlet)",
+    "desc": "Defeat Galamoth with Alucard equipped with his sword and Leather sh. damageless (no morph, platforms, Talisman or Beryl circlet)",
     "condition": "",
     "memaddr": "d0x 073084=20084.1._0x 073084=43244_0x 076ed6=12000.1._0xX03ca7c!=0_d0xX03ca7c=0_R:0xX097ba0<d0xX097ba0_N:0x 0973f0>457_R:0x 0973f4=247.1._0xH03c9a0=0SP:0x 076ed6=12000_R:0xH072f28=2_R:0xH072f28=1_R:0xH072f28=4_R:0xX097c08=42_R:0xX097c14=83_R:0xX097c18=83_0xH138458=15SP:0x 076ed6=12000_P:0xX097c00=5_R:0xX097c00!=123_R:0xX097c04!=5SP:0x 076ed6=12000_P:0xX097c00=123_R:0xX097c00!=5_R:0xX097c04!=123"
   },
@@ -835,7 +835,7 @@
     "id": "83250",
     "badge": "90124",
     "title": "Lucky 3's",
-    "desc": "On Luck Mode, reach the librarian with Kills <=33, Max HP<=33, Lvl<= 9 and without dying (no Death skip or Cube of Zoe)",
+    "desc": "On Luck Mode, reach the librarian with Kills <= 33, Max HP <= 33, Lvl <= 9 and without dying (no Death skip or Cube of Zoe)",
     "condition": "",
     "memaddr": "0x 073084=45776.1._0x 073084=13880.1._0x 073084=38000_d0x 073084=39024_0xH03c9a0=0_0xH03be21=1_0xH09796e=0_0xX097964=0_0xH097969=0_0x 09796a=0_0x 09796c=0_0xX097970=0_0xX097974=0_0xL097978=0_0xH09797d=0_0xH09797e=0_0xH09797f=0_0xH097980=0_0xH097981=0_0xX097ba4<=33_0xX097bf4<=33_0xX097be8<=9_0xX097bc4=99_R:0xX097ba0=0"
   },
