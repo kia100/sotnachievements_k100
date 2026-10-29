@@ -26,7 +26,7 @@ It puts the whole RetroAchievements SotN set (106 achievements) right in the gam
 
 ## Tweaking / adding achievements
 
-It's all in [`assets/achievements.json`](assets/achievements.json). Each entry has a `badge`, `title`, `desc`, an optional `condition` (my small retroactive check syntax) and a `memaddr` (the raw RA logic used for live detection).
+See [EDITING.MD](EDITING.MD) for a comprehensive documentation.
 
 ## Credits
 
