@@ -1,6 +1,6 @@
 ## Modifying / Adding Achievements
 
-Texts for achievements are stored in [`assets/achievements.json`](assets/achievements.json). The formatting is as bellow:
+Texts for achievements are all stored in [`assets/achievements.json`](assets/achievements.json). The formatting is as bellow:
 
 ```
 {
@@ -28,4 +28,4 @@ Explanation:
 
 `condition` : A small retroactive check syntax. Optional.
 
-`memaddr`: The raw RA logic used for live detection
+`memaddr`: The raw RA logic used for live detection.
