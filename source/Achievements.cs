@@ -1,16 +1,28 @@
+/*
+ * SymphonyRecomp Achievements add-on
+ *
+ * (c) Copyright mxd, kia100
+ *
+ * See LICENSE in the root directory for more info.
+ */
+
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Text.Json;
+
 using ImGuiNET;
+
 using RecompOne.Runtime;
+using RecompOne.Runtime.Config; // needed for Option<bool>
 using RecompOne.Runtime.Events;
 using RecompOne.Runtime.Hle;
 using RecompOne.Runtime.Host;
 using RecompOne.Runtime.Host.Window;
 using RecompOne.Runtime.Modding;
+
 using Recompiled;
 using Sotn;
 
@@ -19,26 +31,31 @@ namespace SotnAchievements;
 // one achievement json gives us the metadata, the rest gets filled in as we go
 public sealed class Achievement
 {
-    public string Id = "";
+    public string Id    = "";
     public string Title = "";
-    public string Desc = "";
+    public string Desc  = "";
+	public string Done  = "";
     public string Badge = "";
+
     public Func<bool> Earned = () => false; // my own check, unlocks retroactively
-    public Cheevos.Trigger? Trig; // raw RA logic, for live detection
+    public Cheevos.Trigger? Trig;           // raw RA logic, for live detection
 
     public bool Unlocked;
 
     // loaded lazily, has to be from the render thread
     public uint TexColor;
     public uint TexGray;
-    public int WorldImage = -1;
+    public int  WorldImage = -1;
     public bool WorldTried;
 }
 
 public sealed class AchievementsMod : IMod
 {
-    public const string ModId = "sotnachievements";
-    const string Prefix = "mods.sotnachievements.unlocked.";
+	// Runtime.View and other functions were removed in SymphonyRecomp 1.0.0p
+	Dictionary<string, Option<bool>> AchievementOptions = new Dictionary<string, Option<bool>>();
+	
+    public const string ModId  = "sotnachievements";
+    const string        Prefix = "mods.sotnachievements.unlocked.";
 
     public const double BannerSeconds = 4.5;
 
@@ -49,18 +66,19 @@ public sealed class AchievementsMod : IMod
     // little placement knobs, nudge these if it looks off in game
     const int HeadOffset = 20;
     const int WorldOrder = 8;
+
     public const int RibbonYOffset = 0;
 
     // stuff the tilemap render path leaves around, same trick as the ThroneLeftFill patch
     const uint CurrentBufferPtr = 0x8006C37C;
-    const uint BackbufferX = 0x8006C39C;
-    const uint BackbufferY = 0x8006C3A0;
-    const uint TilemapAddr = 0x80073084;
-    const uint OtOfs = 0x474;
-    const int OtSize = 0x200;
-    const int DefaultBadgeSize = 64;
-
-    // for the odd cheevo the little json dsl cant do, drop a c# check in here keyed by id
+    const uint BackbufferX      = 0x8006C39C;
+    const uint BackbufferY      = 0x8006C3A0;
+    const uint TilemapAddr      = 0x80073084;
+    const uint OtOfs            = 0x474;
+    const int OtSize            = 0x200;
+    const int DefaultBadgeSize  = 64;
+	
+	// for the odd cheevo the little json dsl can't do, drop a C# check in here keyed by id
     static readonly Dictionary<string, Func<bool>> Overrides = new()
     {
         // e.g. { "richters_bane", () => Player.Level >= 99 },
@@ -73,23 +91,27 @@ public sealed class AchievementsMod : IMod
 
     string? _assetsDir;
     readonly Queue<Achievement> _pending = new();
+
     Achievement? _current;
-    DateTime _bannerStart;
+    DateTime     _bannerStart;
 
     public Achievement? CurrentBanner => _current;
-    public double BannerElapsed => (DateTime.UtcNow - _bannerStart).TotalSeconds;
+    public double       BannerElapsed => (DateTime.UtcNow - _bannerStart).TotalSeconds;
 
     public void OnLoad()
     {
         Instance = this;
 
         string? root = ModLoader.LoadedMods.FirstOrDefault(m => m.Id == ModId)?.SourcePath;
-        _assetsDir = string.IsNullOrEmpty(root) ? null : Path.Combine(root, "assets");
+        _assetsDir   = string.IsNullOrEmpty(root) ? null : Path.Combine(root, "assets");
 
         LoadDefinitions();
 
         foreach (var a in Achievements)
-            a.Unlocked = Runtime.View.GetBool(Prefix + a.Id, false);
+		{
+			AchievementOptions.Add(Prefix + a.Id, Options.Bool(Prefix + a.Id));
+			a.Unlocked = AchievementOptions[Prefix + a.Id].Value;
+		}
 
         Event.AddListener<VSyncEvent>(OnVSync);
         Event.AddListener<TilemapRenderedEvent>(OnTilemapRendered);
@@ -97,10 +119,11 @@ public sealed class AchievementsMod : IMod
         if (!_uiRegistered)
         {
             _uiRegistered = true;
+
             PanelManager.Register(new AchievementsPanel());
             PanelManager.Register(new BannerPanel());
-            MenuRegistry.Menu("Achievements", MenuRegistry.OrderGame + 50)
-                .Panel<AchievementsPanel>("Achievements");
+
+            MenuRegistry.Menu("Achievements").After("menu.mods").Panel<AchievementsPanel>("Achievements"); // Needs more testing
         }
     }
 
@@ -108,8 +131,10 @@ public sealed class AchievementsMod : IMod
     {
         Event.RemoveListener<VSyncEvent>(OnVSync);
         Event.RemoveListener<TilemapRenderedEvent>(OnTilemapRendered);
+
         _pending.Clear();
         _current = null;
+
         if (ReferenceEquals(Instance, this)) Instance = null;
     }
 
@@ -117,7 +142,9 @@ public sealed class AchievementsMod : IMod
     {
         Achievements.Clear();
         if (_assetsDir == null) return;
+
         string path = Path.Combine(_assetsDir, "achievements.json");
+
         if (!File.Exists(path))
         {
             Console.Error.WriteLine($"[Achievements] {path} not found");
@@ -128,28 +155,39 @@ public sealed class AchievementsMod : IMod
         {
             using var doc = JsonDocument.Parse(File.ReadAllText(path), new JsonDocumentOptions
             {
-                CommentHandling = JsonCommentHandling.Skip,
+                CommentHandling     = JsonCommentHandling.Skip,
                 AllowTrailingCommas = true,
             });
+
             foreach (var e in doc.RootElement.EnumerateArray())
             {
                 string id = Str(e, "id");
                 if (string.IsNullOrEmpty(id)) continue;
+
                 string memaddr = Str(e, "memaddr");
                 Cheevos.Trigger? trig = null;
+
                 if (memaddr.Length > 0)
                 {
-                    try { trig = Cheevos.Trigger.Parse(memaddr); }
-                    catch (Exception ex) { Console.Error.WriteLine($"[Achievements] {id}: bad memaddr ({ex.Message})"); }
+                    try
+					{
+						trig = Cheevos.Trigger.Parse(memaddr);
+					}
+                    catch (Exception ex)
+					{
+						Console.Error.WriteLine($"[Achievements] {id}: bad memaddr ({ex.Message})");
+					}
                 }
+
                 Achievements.Add(new Achievement
                 {
-                    Id = id,
-                    Badge = Str(e, "badge"),
-                    Title = Str(e, "title"),
-                    Desc = Str(e, "desc"),
+                    Id     = id,
+                    Badge  = Str(e, "badge"),
+                    Title  = Str(e, "title"),
+                    Desc   = Str(e, "desc"),
+					Done   = Str(e, "done"),
                     Earned = ResolveCondition(id, Str(e, "condition")),
-                    Trig = trig,
+                    Trig   = trig,
                 });
             }
             Console.WriteLine($"[Achievements] loaded {Achievements.Count} achievement(s)");
@@ -177,14 +215,15 @@ public sealed class AchievementsMod : IMod
 
         var parts = spec.Split(';', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
                         .Select(p => ParseAtom(id, p)).ToArray();
+
         return parts.Length == 1 ? parts[0] : () => parts.All(p => p());
     }
 
     static Func<bool> ParseAtom(string id, string atom)
     {
-        int colon = atom.IndexOf(':');
-        string kind = colon < 0 ? atom : atom[..colon];
-        string arg = colon < 0 ? "" : atom[(colon + 1)..];
+        int    colon = atom.IndexOf(':');
+        string kind  = colon < 0 ? atom : atom[..colon];
+        string arg   = colon < 0 ? "" : atom[(colon + 1)..];
 
         switch (kind)
         {
@@ -200,9 +239,11 @@ public sealed class AchievementsMod : IMod
             }
 
             case "level": // richter never levels so make sure it's actually alucard we're looking at
+            {
                 if (int.TryParse(arg, out int lvl))
                     return () => Player.IsAlucard && Player.Level >= lvl;
                 break;
+            }
 
             case "relic":
             {
@@ -249,18 +290,21 @@ public sealed class AchievementsMod : IMod
     {
         var mod = Instance ?? this;
         int unlocked = mod.Achievements.Count(a => a.Unlocked);
+
         ImGui.Text($"{unlocked} / {mod.Achievements.Count} unlocked");
         ImGui.TextDisabled("Open the \"Achievements\" menu to view the full list.");
         ImGui.Separator();
+
         if (ImGui.Button("Reset all achievements"))
         {
             foreach (var a in mod.Achievements)
             {
                 a.Unlocked = false;
-                Runtime.View.SetBool(Prefix + a.Id, false);
+                AchievementOptions[Prefix + a.Id].Value = false;
             }
-            Runtime.SaveView();
+            //Runtime.SaveView();
         }
+
         ImGui.SameLine();
         ImGui.TextDisabled("(they re-unlock next time their condition is met)");
     }
@@ -279,6 +323,7 @@ public sealed class AchievementsMod : IMod
 
             bool earned = false;
             try { earned = a.Earned(); } catch { } // my check first, this is the one that catches old saves
+
             if (!earned && a.Trig != null)
                 try { earned = a.Trig.Test(RaRead); } catch { } // otherwise fall back to the real RA logic
 
@@ -288,7 +333,9 @@ public sealed class AchievementsMod : IMod
 
     void TickBanner()
     {
-        if (_current != null && BannerElapsed > BannerSeconds) _current = null;
+        if (_current != null && BannerElapsed > BannerSeconds)
+            _current = null;
+
         if (_current == null && _pending.Count > 0)
         {
             _current = _pending.Dequeue();
@@ -299,8 +346,10 @@ public sealed class AchievementsMod : IMod
     void Unlock(Achievement a)
     {
         a.Unlocked = true;
-        Runtime.View.SetBool(Prefix + a.Id, true);
-        Runtime.SaveView();
+
+        AchievementOptions[Prefix + a.Id].Value = true;
+        //Runtime.SaveView();
+
         _pending.Enqueue(a);
         Console.WriteLine($"[Achievements] unlocked: {a.Title}");
     }
@@ -327,13 +376,14 @@ public sealed class AchievementsMod : IMod
         GpuPrims.SetOrderingTable(m.ReadU32(CurrentBufferPtr) + OtOfs, OtSize);
 
         const int drawSize = 32;
-        double t = BannerElapsed;
-        int rise = (int)(Math.Min(t, 0.4) / 0.4 * 8); // small pop upward
 
-        int bx = (int)m.ReadU32(BackbufferX);
-        int by = (int)m.ReadU32(BackbufferY);
-        int x = bx + (p.PosX - e.ScrollX) - drawSize / 2;
-        int y = by + (p.PosY - e.ScrollY) - HeadOffset - drawSize - rise;
+        double t    = BannerElapsed;
+        int    rise = (int)(Math.Min(t, 0.4) / 0.4 * 8); // small pop upward
+
+        int bx = (int) m.ReadU32(BackbufferX);
+        int by = (int) m.ReadU32(BackbufferY);
+        int x  = bx + (p.PosX - e.ScrollX) - drawSize / 2;
+        int y  = by + (p.PosY - e.ScrollY) - HeadOffset - drawSize - rise;
 
         GpuPrims.Sprite(WorldOrder, img, x, y, drawSize, drawSize);
     }
@@ -341,16 +391,23 @@ public sealed class AchievementsMod : IMod
     int EnsureWorldImage(Achievement a, out int dim)
     {
         dim = DefaultBadgeSize;
-        if (a.WorldImage >= 0) return a.WorldImage;
-        if (a.WorldTried || _assetsDir == null) return -1;
+
+        if (a.WorldImage >= 0)
+            return a.WorldImage;
+        if (a.WorldTried || _assetsDir == null)
+            return -1;
+
         a.WorldTried = true;
+
         try
         {
             // we ship pre-decoded rgba blobs on purpose so the mod doesn't need an image lib just to
             // draw one badge in-world. todo: decode the png here and drop the .rgba files if it's ever worth it
             byte[] rgba = File.ReadAllBytes(Path.Combine(_assetsDir, a.Badge + ".rgba"));
-            int side = (int)Math.Round(Math.Sqrt(rgba.Length / 4.0)); // badges are square, so get the size back from the length
+            int side    = (int) Math.Round(Math.Sqrt(rgba.Length / 4.0)); // badges are square, so get the size back from the length
+
             if (side * side * 4 != rgba.Length) side = DefaultBadgeSize;
+
             dim = side;
             a.WorldImage = GpuPrims.RegisterImage(rgba, side, side);
         }
@@ -359,6 +416,7 @@ public sealed class AchievementsMod : IMod
             Console.Error.WriteLine($"[Achievements] world icon load failed for {a.Id}: {ex.Message}");
             a.WorldImage = -1;
         }
+
         return a.WorldImage;
     }
 
@@ -371,13 +429,23 @@ public sealed class AchievementsMod : IMod
         if (unlocked && a.TexColor != 0) return a.TexColor;
         if (!unlocked && a.TexGray != 0) return a.TexGray;
 
-        uint tex = 0;
+        uint tex    = 0;
         string file = unlocked ? a.Badge + ".png" : a.Badge + "_lock.png";
-        try { tex = HostWindow.UploadPng(File.ReadAllBytes(Path.Combine(_assetsDir, file))); }
-        catch (Exception ex) { Console.Error.WriteLine($"[Achievements] icon load failed for {a.Id}: {ex.Message}"); }
 
-        if (unlocked) a.TexColor = tex;
-        else a.TexGray = tex;
+        try
+        {
+            tex = HostWindow.UploadPng(File.ReadAllBytes(Path.Combine(_assetsDir, file)));
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"[Achievements] icon load failed for {a.Id}: {ex.Message}");
+        }
+
+        if (unlocked)
+            a.TexColor = tex;
+        else
+            a.TexGray = tex;
+
         return tex;
     }
 
@@ -388,8 +456,9 @@ public sealed class AchievementsMod : IMod
 // the "Achievements" window you open from the menu bar - just the full list
 public sealed class AchievementsPanel : IPanel
 {
-    public string Name => "Achievements";
+    public string Name     => "Achievements";
     public string TitleKey => "Achievements";
+
     public bool IsOpen { get; set; }
 
     public void Draw()
@@ -398,6 +467,7 @@ public sealed class AchievementsPanel : IPanel
 
         ImGui.SetNextWindowSize(new Vector2(460, 420), ImGuiCond.FirstUseEver);
         bool open = IsOpen;
+
         if (!ImGui.Begin("Achievements", ref open))
         {
             IsOpen = open;
@@ -427,22 +497,24 @@ public sealed class AchievementsPanel : IPanel
 
     static void DrawRow(AchievementsMod mod, Achievement a)
     {
-        var size = new Vector2(48, 48);
-        uint tex = mod.TexFor(a, a.Unlocked);
+        var  size = new Vector2(48, 48);
+        uint tex  = mod.TexFor(a, a.Unlocked);
+
         if (tex != 0)
             ImGui.Image((nint)tex, size, Vector2.Zero, Vector2.One,
                 new Vector4(1, 1, 1, a.Unlocked ? 1f : 0.6f));
         else
             ImGui.Dummy(size);
+
         ImGui.SameLine();
 
         ImGui.BeginGroup();
         ImGui.TextColored(a.Unlocked ? new Vector4(1f, 0.84f, 0.35f, 1f)
                                      : new Vector4(0.6f, 0.6f, 0.6f, 1f), a.Title);
-        ImGui.TextDisabled(a.Desc);
+        ImGui.TextDisabled(!a.Unlocked ? a.Desc : (a.Done == "") ? a.Desc : a.Done);
         ImGui.TextColored(a.Unlocked ? new Vector4(0.4f, 0.85f, 0.4f, 1f)
-                                     : new Vector4(0.5f, 0.5f, 0.5f, 1f),
-            a.Unlocked ? "Unlocked" : "Locked");
+                                     : new Vector4(0.5f, 0.5f, 0.5f, 1f), a.Unlocked ? "Unlocked" : "Locked");
+
         ImGui.EndGroup();
         ImGui.Separator();
     }
@@ -452,11 +524,12 @@ public sealed class AchievementsPanel : IPanel
 // never actually shows as a real window (we only draw on the foreground list)
 public sealed class BannerPanel : IPanel
 {
-    public string Name => "Achievement Banner";
+    public string Name     => "Achievement Banner";
     public string TitleKey => "Achievement Banner";
+
     public bool IsOpen { get => true; set { } } // always ticked so DrawPanels calls Draw() every frame
 
-    const string Label = "ACHIEVEMENT UNLOCKED";
+    const string Label    = "ACHIEVEMENT UNLOCKED";
     const float LabelSize = 13f, TitleSize = 22f, LabelSpace = 2.5f, TitleSpace = 1.5f;
 
     static uint C(byte r, byte g, byte b, byte a) => AchievementsMod.Col(r, g, b, a);
@@ -464,33 +537,40 @@ public sealed class BannerPanel : IPanel
     public void Draw()
     {
         var mod = AchievementsMod.Instance;
-        var a = mod?.CurrentBanner;
+        var a   = mod?.CurrentBanner;
+
         if (mod == null || a == null) return;
 
-        double t = mod.BannerElapsed;
+        double t   = mod.BannerElapsed;
         double dur = AchievementsMod.BannerSeconds;
 
         float alpha = 1f;
-        if (t < 0.3) alpha = (float)(t / 0.3);
-        else if (t > dur - 0.6) alpha = (float)Math.Max(0, (dur - t) / 0.6);
-        alpha = Math.Clamp(alpha, 0f, 1f);
+
+        if (t < 0.3)
+            alpha = (float)(t / 0.3);
+        else if (t > dur - 0.6)
+            alpha = (float)Math.Max(0, (dur - t) / 0.6);
+
+        alpha  = Math.Clamp(alpha, 0f, 1f);
         byte A = (byte)(alpha * 255);
+
         if (A == 0) return;
 
-        var font = ImGui.GetFont();
+        var    font  = ImGui.GetFont();
         string title = a.Title.ToUpperInvariant();
+
         float labelW = MeasureSpaced(LabelSize, Label, LabelSpace);
         float titleW = MeasureSpaced(TitleSize, title, TitleSpace);
 
-        const float pad = 14f, iconDim = 54f, gap = 16f, h = 88f;
-        float contentW = Math.Max(labelW, titleW);
-        var vp = ImGui.GetMainViewport();
-        float w = Math.Clamp(pad + iconDim + gap + contentW + pad, 300f, vp.WorkSize.X - 24f);
+        const float pad   = 14f, iconDim = 54f, gap = 16f, h = 88f;
+        float contentW    = Math.Max(labelW, titleW);
+        var   vp          = ImGui.GetMainViewport();
+        float w           = Math.Clamp(pad + iconDim + gap + contentW + pad, 300f, vp.WorkSize.X - 24f);
 
-        float slide = (float)Math.Min(1.0, t / 0.3);
+        float slide   = (float)Math.Min(1.0, t / 0.3);
         float restTop = vp.WorkPos.Y + (vp.WorkSize.Y - h) * 0.5f + AchievementsMod.RibbonYOffset;
-        float x = vp.WorkPos.X + (vp.WorkSize.X - w) * 0.5f;
-        float y = restTop + (1f - slide) * 16f;
+        float x       = vp.WorkPos.X + (vp.WorkSize.X - w) * 0.5f;
+        float y       = restTop + (1f - slide) * 16f;
 
         var dl = ImGui.GetForegroundDrawList();
         var p0 = new Vector2(x, y);
@@ -499,29 +579,36 @@ public sealed class BannerPanel : IPanel
         // drop shadow
         dl.AddRectFilled(p0 + new Vector2(5, 7), p1 + new Vector2(5, 7), C(0, 0, 0, (byte)(A * 0.45f)), 6f);
         byte body = (byte)(A * 0.97f);
+
         dl.AddRectFilledMultiColor(p0, p1,
             C(22, 24, 60, body), C(22, 24, 60, body), C(8, 8, 26, body), C(8, 8, 26, body));
+
         // gold double frame
         dl.AddRect(p0, p1, C(210, 186, 120, A), 5f, ImDrawFlags.None, 2.5f);
+
         var q0 = p0 + new Vector2(4, 4);
         var q1 = p1 - new Vector2(4, 4);
         dl.AddRect(q0, q1, C(120, 96, 52, A), 3f, ImDrawFlags.None, 1f);
+
         CornerTicks(dl, p0, p1, C(235, 214, 150, A));
 
         // framed badge
-        uint tex = mod.TexFor(a, true);
-        var ip0 = new Vector2(x + pad, y + (h - iconDim) * 0.5f);
-        var ip1 = ip0 + new Vector2(iconDim, iconDim);
+        uint tex  = mod.TexFor(a, true);
+        var  ip0  = new Vector2(x + pad, y + (h - iconDim) * 0.5f);
+        var  ip1  = ip0 + new Vector2(iconDim, iconDim);
+
         if (tex != 0)
             dl.AddImage((nint)tex, ip0, ip1, Vector2.Zero, Vector2.One, C(255, 255, 255, A));
         else
             dl.AddRectFilled(ip0, ip1, C(40, 40, 70, A), 3f);
+
         dl.AddRect(ip0 - new Vector2(1, 1), ip1 + new Vector2(1, 1), C(210, 186, 120, A), 2f, ImDrawFlags.None, 1.5f);
 
         // text block
-        float tx = ip1.X + gap;
-        float blockH = LabelSize + 8f + TitleSize;
-        float ty = y + (h - blockH) * 0.5f;
+		float blockH = LabelSize + 8f + TitleSize;
+        float tx     = ip1.X + gap;
+        float ty     = y + (h - blockH) * 0.5f;
+
         DrawSpaced(font, LabelSize, new Vector2(tx, ty), C(228, 198, 110, A), Label, LabelSpace);
         DrawSpaced(font, TitleSize, new Vector2(tx, ty + LabelSize + 8f), C(246, 244, 236, A), title, TitleSpace);
     }
@@ -529,6 +616,7 @@ public sealed class BannerPanel : IPanel
     static void CornerTicks(ImDrawListPtr dl, Vector2 p0, Vector2 p1, uint col)
     {
         const float s = 10f, o = 8f, th = 2f;
+
         dl.AddLine(new Vector2(p0.X + o, p0.Y + o), new Vector2(p0.X + o + s, p0.Y + o), col, th);
         dl.AddLine(new Vector2(p0.X + o, p0.Y + o), new Vector2(p0.X + o, p0.Y + o + s), col, th);
         dl.AddLine(new Vector2(p1.X - o, p0.Y + o), new Vector2(p1.X - o - s, p0.Y + o), col, th);
@@ -542,18 +630,23 @@ public sealed class BannerPanel : IPanel
     static float MeasureSpaced(float size, string text, float spacing)
     {
         float scale = size / ImGui.GetFontSize();
-        float w = 0f;
-        foreach (char ch in text) w += ImGui.CalcTextSize(ch.ToString()).X * scale + spacing;
+        float w     = 0f;
+
+        foreach (char ch in text)
+            w += ImGui.CalcTextSize(ch.ToString()).X * scale + spacing;
+
         return text.Length > 0 ? w - spacing : 0f;
     }
 
     static void DrawSpaced(ImFontPtr font, float size, Vector2 pos, uint col, string text, float spacing)
     {
         float scale = size / ImGui.GetFontSize();
-        float x = pos.X;
+        float x     = pos.X;
+
         foreach (char ch in text)
         {
             string s = ch.ToString();
+
             ImGui.GetForegroundDrawList().AddText(font, size, new Vector2(x, pos.Y), col, s);
             x += ImGui.CalcTextSize(s).X * scale + spacing;
         }
