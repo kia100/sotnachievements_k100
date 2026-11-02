@@ -2,7 +2,7 @@
 
 Texts for achievements are all stored in [`assets/achievements.json`](assets/achievements.json). The formatting is as bellow:
 
-```
+```json
 {
     "id": "",
     "badge": "",
