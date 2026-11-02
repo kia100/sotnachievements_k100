@@ -30,7 +30,7 @@ The original modification by mxd no longer works with SymphonyRecomp version 1.0
 
 ## Tweaking / adding achievements
 
-See [EDITING.MD](EDITING.MD) for a comprehensive documentation.
+See [EDITING.MD](EDITING.md) for a comprehensive documentation.
 
 ## Credits
 
