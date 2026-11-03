@@ -26,7 +26,7 @@ The original modification by mxd no longer works with SymphonyRecomp version 1.0
 
 - Nothing talks to RetroAchievements. The conditions and badges are bundled and everything runs locally.
 - Retroactive only works for stuff that sticks in your save. A past damageless fight can't be proven from a save file, so those need a fresh run.
-- There's a "Reset all achievements" button under `Mods > Achievements` if you want to reset. They just re-unlock next time the condition is met.
+- A "Reset all achievements" button is present under `Mods > Achievements` if you want to reset. They just re-unlock next time the condition is met.
 
 ## Tweaking / adding achievements
 
