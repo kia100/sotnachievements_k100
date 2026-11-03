@@ -1,12 +1,12 @@
 # Achievements
 
-An achievements mod for [SymphonyRecomp](https://github.com/BlackLabelHQ/SymphonyRecomp), the Castlevania: Symphony of the Night PSX recompilation, and and a fork of [mxd's original mod](https://github.com/mixvd/sotnachievements).
+An achievements mod for [SymphonyRecomp](https://github.com/BlackLabelHQ/SymphonyRecomp), the Castlevania: Symphony of the Night PSX recompilation, and a fork of [mxd's original mod](https://github.com/mixvd/sotnachievements).
 
 Achievements puts the whole RetroAchievements SotN set (106 achievements) right in the game, with pop-ups when you earn one and a menu to look through them. It's all offline, there's no RetroAchievements login or connection involved; the logic just ships with the mod and watches the game's memory.
 
 ## Background
 
-The original modification by mxd no longer works with SymphonyRecomp version 1.0.0p and later, as this release saw an overhaul in its API handling. Seeing that the original author is unavailable, I sought to create a new version myself with support for 1.0.0p. Note that this fork WILL NOT work with 0.5.1 and earlier. For that release please use mxd's version instead.
+The original modification by mxd no longer works with SymphonyRecomp version 1.0.0p and later, as this release saw an overhaul in its API handling. Seeing that the original author is unavailable, I sought to create a new version myself with support for 1.0.0p and some bugfixes. Note that this fork WILL NOT work with 0.5.1 and earlier. For that release please use mxd's version instead.
 
 ## What it does
 
