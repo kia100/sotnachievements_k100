@@ -36,7 +36,7 @@ public static class Cheevos
         public void Sample(Func<uint, byte> rb)
         {
             Cur = Read(rb);
-            if (!_primed) { Last = Prior = Cur; _primed = true; } // dont let a delta fire on the very first frame
+            if (!_primed) { Last = Prior = Cur; _primed = true; } // don't let a delta fire on the very first frame
         }
 
         public void Commit()
@@ -143,7 +143,7 @@ public static class Cheevos
             return t;
         }
 
-        // groups split on 'S'. thing is 'S' is also the bit6 size char so dont split on a "0xS..." ref
+        // groups split on 'S'. thing is 'S' is also the bit6 size char so don't split on a "0xS..." ref
         static IEnumerable<string> SplitGroups(string s)
         {
             int start = 0;
