@@ -129,6 +129,8 @@ public sealed class AchievementsMod : IMod
 
     public void OnUnload()
     {
+		MenuRegistry.Remove("Achievements"); // Remove entry from the menu bar
+		
         Event.RemoveListener<VSyncEvent>(OnVSync);
         Event.RemoveListener<TilemapRenderedEvent>(OnTilemapRendered);
 
