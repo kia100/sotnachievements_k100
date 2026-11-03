@@ -310,7 +310,7 @@
     "badge": "88338",
     "title": "Sword of Many Slashes",
     "desc": "Obtain the elusive Crissaegrim (and now you will have finished the game)",
-	"desc": "Obtained the elusive Crissaegrim (and now you have finished the game)",
+	"done": "Obtained the elusive Crissaegrim (and now you have finished the game)",
     "condition": "hand:Crissaegrim",
     "memaddr": "0xH097a2e=1_d0xH097a2e=0_0xH03c9a0=0_N:0xX097c00!=164_R:d0xX097c00=164_N:0xX097c04!=164_R:d0xX097c04=164S0x 073084=59672S0x 073084=7960S0x 073084=62744S0x 073084=9496"
   },
@@ -803,7 +803,7 @@
   {
     "id": "83247",
     "badge": "90249",
-    "title": "I was Born in Castlevania",
+    "title": "I Was Born in Castlevania",
     "desc": "Defeat Darkwing Bat with Richter damageless and using only the whip (no heart, uppercut, dash or slide usage)",
 	"done": "Defeated Darkwing Bat with Richter damageless and using only the whip (no heart, uppercut, dash or slide usage)",
     "condition": "",
