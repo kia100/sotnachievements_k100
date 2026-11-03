@@ -123,7 +123,7 @@ public sealed class AchievementsMod : IMod
             PanelManager.Register(new AchievementsPanel());
             PanelManager.Register(new BannerPanel());
 
-            MenuRegistry.Menu("Achievements").After("menu.mods").Panel<AchievementsPanel>("Achievements"); // Needs more testing
+            MenuRegistry.Menu("Achievements").After("menu.mods").Panel<AchievementsPanel>("View Achievements"); // Needs more testing
         }
     }
 
@@ -302,7 +302,6 @@ public sealed class AchievementsMod : IMod
                 a.Unlocked = false;
                 AchievementOptions[Prefix + a.Id].Value = false;
             }
-            //Runtime.SaveView();
         }
 
         ImGui.SameLine();
@@ -348,7 +347,6 @@ public sealed class AchievementsMod : IMod
         a.Unlocked = true;
 
         AchievementOptions[Prefix + a.Id].Value = true;
-        //Runtime.SaveView();
 
         _pending.Enqueue(a);
         Console.WriteLine($"[Achievements] unlocked: {a.Title}");
@@ -465,7 +463,7 @@ public sealed class AchievementsPanel : IPanel
     {
         var mod = AchievementsMod.Instance;
 
-        ImGui.SetNextWindowSize(new Vector2(460, 420), ImGuiCond.FirstUseEver);
+        ImGui.SetNextWindowSize(new Vector2(900, 450), ImGuiCond.FirstUseEver);
         bool open = IsOpen;
 
         if (!ImGui.Begin("Achievements", ref open))
