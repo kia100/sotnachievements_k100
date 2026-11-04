@@ -120,10 +120,9 @@ public sealed class AchievementsMod : IMod
         {
             _uiRegistered = true;
 
+			// BannerPanel() not needed
             PanelManager.Register(new AchievementsPanel());
-            PanelManager.Register(new BannerPanel());
-
-            MenuRegistry.Menu("Achievements").After("menu.mods").Panel<AchievementsPanel>("View Achievements"); // Needs more testing
+            MenuRegistry.Menu("Achievements").After("menu.mods").Panel<AchievementsPanel>("View Achievements");
         }
     }
 
