@@ -1,6 +1,6 @@
 ## Modifying / Adding Achievements
 
-Texts for achievements are all stored in [`assets/achievements.json`](assets/achievements.json). The formatting is as bellow:
+Configuration for achievements is stored in [`assets/achievements.json`](assets/achievements.json). The formatting for each entry is as bellow:
 
 ```json
 {
@@ -18,7 +18,7 @@ Explanation:
 
 `id`: Achievement ID. A number written as a string.
 
-`badge`: The number used for loading the required image files. For instance, if the number is x (written in string formatting), the mod will look for x.png and x_lock.png, for unlocked and locked states respectively.
+`badge`: The number used for loading the required image files. For instance, if the number is x (written in string formatting), the mod will look for x.png and x_lock.png, for unlocked and locked states respectively. It is also used to load the RGBA files present.
 
 `title`: Title of the achievement.
 
