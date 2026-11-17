@@ -13,14 +13,14 @@ using System.Linq;
 using System.Numerics;
 using System.Text.Json;
 
-using ImGuiNET;
+using Hexa.NET.ImGui; // The new API.
+using RecompOne.UI;   // Now needed for whatever reason.
 
 using RecompOne.Runtime;
 using RecompOne.Runtime.Config; // needed for Option<bool>
 using RecompOne.Runtime.Events;
 using RecompOne.Runtime.Hle;
 using RecompOne.Runtime.Host;
-using RecompOne.Runtime.Host.Window;
 using RecompOne.Runtime.Modding;
 
 using Recompiled;
@@ -120,7 +120,8 @@ public sealed class AchievementsMod : IMod
         {
             _uiRegistered = true;
 
-			// BannerPanel() not needed
+			// BannerPanel() registers a tab bar, investigate why
+			PanelManager.Register(new BannerPanel());
             PanelManager.Register(new AchievementsPanel());
             MenuRegistry.Menu("Achievements").After("menu.mods").Panel<AchievementsPanel>("View Achievements");
         }
@@ -453,7 +454,7 @@ public sealed class AchievementsMod : IMod
 }
 
 // the "Achievements" window you open from the menu bar - just the full list
-public sealed class AchievementsPanel : IPanel
+public sealed class AchievementsPanel : IEmbeddedPanel
 {
     public string Name     => "Achievements";
     public string TitleKey => "Achievements";
@@ -493,6 +494,11 @@ public sealed class AchievementsPanel : IPanel
         IsOpen = open;
         ImGui.End();
     }
+	
+	public void DrawContent()
+	{
+		// Dummy function. Compiler will complain if absent.
+	}
 
     static void DrawRow(AchievementsMod mod, Achievement a)
     {
@@ -500,8 +506,8 @@ public sealed class AchievementsPanel : IPanel
         uint tex  = mod.TexFor(a, a.Unlocked);
 
         if (tex != 0)
-            ImGui.Image((nint)tex, size, Vector2.Zero, Vector2.One,
-                new Vector4(1, 1, 1, a.Unlocked ? 1f : 0.6f));
+			// I need borders! I need borders! ImGui.Image() won't do!
+            ImGui.ImageWithBg(RecompOne.UI.ImGuiUtils.Tex((nint)tex), size, Vector2.Zero, Vector2.One, new Vector4(1, 1, 1, a.Unlocked ? 1f : 0.6f));
         else
             ImGui.Dummy(size);
 
@@ -521,7 +527,7 @@ public sealed class AchievementsPanel : IPanel
 
 // the unlock ribbon it's an always-on overlay dressed up to look like a sotn menu box,
 // never actually shows as a real window (we only draw on the foreground list)
-public sealed class BannerPanel : IPanel
+public sealed class BannerPanel : IEmbeddedPanel
 {
     public string Name     => "Achievement Banner";
     public string TitleKey => "Achievement Banner";
@@ -529,7 +535,7 @@ public sealed class BannerPanel : IPanel
     public bool IsOpen { get => true; set { } } // always ticked so DrawPanels calls Draw() every frame
 
     const string Label    = "ACHIEVEMENT UNLOCKED";
-    const float LabelSize = 13f, TitleSize = 22f, LabelSpace = 2.5f, TitleSpace = 1.5f;
+    const float  LabelSize = 13f, TitleSize = 22f, LabelSpace = 2.5f, TitleSpace = 1.5f;
 
     static uint C(byte r, byte g, byte b, byte a) => AchievementsMod.Col(r, g, b, a);
 
@@ -561,10 +567,10 @@ public sealed class BannerPanel : IPanel
         float labelW = MeasureSpaced(LabelSize, Label, LabelSpace);
         float titleW = MeasureSpaced(TitleSize, title, TitleSpace);
 
-        const float pad   = 14f, iconDim = 54f, gap = 16f, h = 88f;
-        float contentW    = Math.Max(labelW, titleW);
-        var   vp          = ImGui.GetMainViewport();
-        float w           = Math.Clamp(pad + iconDim + gap + contentW + pad, 300f, vp.WorkSize.X - 24f);
+        const float pad = 14f, iconDim = 54f, gap = 16f, h = 88f;
+        float contentW  = Math.Max(labelW, titleW);
+        var   vp        = ImGui.GetMainViewport();
+        float w         = Math.Clamp(pad + iconDim + gap + contentW + pad, 300f, vp.WorkSize.X - 24f);
 
         float slide   = (float)Math.Min(1.0, t / 0.3);
         float restTop = vp.WorkPos.Y + (vp.WorkSize.Y - h) * 0.5f + AchievementsMod.RibbonYOffset;
@@ -597,7 +603,8 @@ public sealed class BannerPanel : IPanel
         var  ip1  = ip0 + new Vector2(iconDim, iconDim);
 
         if (tex != 0)
-            dl.AddImage((nint)tex, ip0, ip1, Vector2.Zero, Vector2.One, C(255, 255, 255, A));
+			// Can't use (nint)tex on its own.
+            dl.AddImage(RecompOne.UI.ImGuiUtils.Tex((nint)tex), ip0, ip1, Vector2.Zero, Vector2.One, C(255, 255, 255, A));
         else
             dl.AddRectFilled(ip0, ip1, C(40, 40, 70, A), 3f);
 
@@ -611,6 +618,11 @@ public sealed class BannerPanel : IPanel
         DrawSpaced(font, LabelSize, new Vector2(tx, ty), C(228, 198, 110, A), Label, LabelSpace);
         DrawSpaced(font, TitleSize, new Vector2(tx, ty + LabelSize + 8f), C(246, 244, 236, A), title, TitleSpace);
     }
+	
+	public void DrawContent()
+	{
+		// Dummy function. Compiler will complain if absent.
+	}
 
     static void CornerTicks(ImDrawListPtr dl, Vector2 p0, Vector2 p1, uint col)
     {
@@ -646,7 +658,8 @@ public sealed class BannerPanel : IPanel
         {
             string s = ch.ToString();
 
-            ImGui.GetForegroundDrawList().AddText(font, size, new Vector2(x, pos.Y), col, s);
+			// Thou canst not run that which is safe.
+            unsafe { ImGui.GetForegroundDrawList().AddText(font, size, new Vector2(x, pos.Y), col, s); }
             x += ImGui.CalcTextSize(s).X * scale + spacing;
         }
     }
