@@ -8,6 +8,10 @@ Achievements puts the whole RetroAchievements SotN set (106 achievements) right 
 
 The original modification by mxd no longer works with SymphonyRecomp version 1.0.0p and later, as this release saw an overhaul in its API handling. Seeing that the original author is unavailable, I sought to create a new version myself with support for 1.0.0p and some bugfixes. Note that this fork WILL NOT work with 0.5.1 and earlier. For that release please use mxd's version instead.
 
+## Requirements
+
+Version 1.20 of SymphonyRecomp is currently required. For versions 1.0.0 through 1.1.2 please use the older Achievements 1.0 instead.
+
 ## What it does
 
 - All 106 achievements, with the titles, descriptions and badges from the RA set.
