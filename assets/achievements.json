@@ -32,7 +32,7 @@
     "title": "Magical Key",
     "desc": "Acquire the Jewel of Open from the master librarian",
 	"done": "Acquired the Jewel of Open from the master librarian",
-    "condition": "relic:JewelOfOpen",
+    "condition": "relic:JewelOfOpen;timeattack:1",
     "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=38000_0xH097974=3_0xH097974>d0xH097974_A:0xX097bf0_500=d0xX097bf0_0xH03be21=1"
   },
   {
@@ -50,7 +50,7 @@
     "title": "Black Wings",
     "desc": "Find the Leap Stone",
 	"done": "Found the Leap Stone",
-    "condition": "relic:LeapStone",
+    "condition": "relic:LeapStone;timeattack:1",
     "memaddr": "R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084!=9812_0xH097971!=0_d0xH097971=0_0xH03be21=1"
   },
   {
@@ -302,7 +302,7 @@
     "title": "Waterproof",
     "desc": "Find the Holy Symbol in the Underground Caverns",
 	"done": "Found the Holy Symbol in the Underground Caverns",
-    "condition": "relic:HolySymbol",
+    "condition": "relic:HolySymbol;timeattack:1",
     "memaddr": "P:d0xH097914=4_P:0xH097914=4_R:d0x 03c774=61144_R:0x 03c774=61144_R:0x 073084=0_0x 073084=24148_d0xH097972=0_0xH097972!=0"
   },
   {
@@ -356,7 +356,7 @@
     "title": "Master Shapeshifter",
     "desc": "Acquire the powers to shapeshift into wolf, mist and bat",
 	"done": "Acquired the powers to shapeshift into wolf, mist and bat",
-    "condition": "relic:SoulOfWolf,FormOfMist,SoulOfBat",
+    "condition": "relic:SoulOfWolf,FormOfMist,SoulOfBat;timeattack:1",
     "memaddr": "R:0x 03c774=61144_R:d0x 03c774=61144_R:0x 03c774=6300_R:d0x 03c774=6300_0xH097968!=0_0xH09796b!=0_0xH097964!=0_0xH03c9a4=5SR:0x 073084=0_0xH097968=0.1.SR:0x 073084=0_0xH09796b=0.1.SR:0x 073084=0_0xH097964=0.1."
   },
   {
@@ -365,7 +365,7 @@
     "title": "All Powerful Being",
     "desc": "Acquire all of the forms' upgrades",
 	"done": "Acquired all of the forms' upgrades",
-    "condition": "relic:SoulOfBat,EchoOfBat,ForceOfEcho,FireOfBat,SoulOfWolf,PowerOfWolf,SkillOfWolf,FormOfMist,PowerOfMist,GasCloud",
+    "condition": "relic:SoulOfBat,EchoOfBat,ForceOfEcho,FireOfBat,SoulOfWolf,PowerOfWolf,SkillOfWolf,FormOfMist,PowerOfMist,GasCloud;timeattack:1",
     "memaddr": "R:d0xH097914=4_R:0xH097914=4_R:0x 097ba0=0_R:0x 03c774=61144_R:d0x 03c774=61144_R:0x 03c774=6300_R:d0x 03c774=6300_0xH03c9a4=5_0xH03c9a0=0_0xH097965!=0_0xH097966!=0_0xH097967!=0_0xH097969!=0_0xH09796a!=0_0xH09796c!=0_0xH09796d!=0SR:0x 073084=0_R:0xH03c9a4=3_d0xH097965=0.1.SR:0x 073084=0_R:0xH03c9a4=3_d0xH097966=0.1.SR:0x 073084=0_R:0xH03c9a4=3_d0xH097967=0.1.SR:0x 073084=0_R:0xH03c9a4=3_d0xH097969=0.1.SR:0x 073084=0_R:0xH03c9a4=3_d0xH09796a=0.1.SR:0x 073084=0_R:0xH03c9a4=3_d0xH09796c=0.1.SR:0x 073084=0_R:0xH03c9a4=3_d0xH09796d=0.1."
   },
   {
